@@ -31,7 +31,7 @@
       data-precedence="next"
     />
 
-    <title>Custom Home - Lexend Template (No JS Control)</title>
+    <title>Auto Rice Mill</title>
     <meta
       name="description"
       content="Custom Lexend page with full HTML control - no JavaScript interference"
@@ -90,12 +90,13 @@
     <div
       class="page-wrapper uni-body panel bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-200 overflow-x-hidden"
     >
+      <!-- Header -->
       <header
         style="--uc-nav-height: 80px !important"
         class="uc-header header-default uc-navbar-sticky-wrap z-999"
       >
         <nav
-          class="uc-navbar-container uc-navbar-float ft-tertiary z-1 bg-secondary dark:bg-gray-800"
+          class="uc-navbar-container uc-navbar-float ft-tertiary z-1 bg-secondary dark:bg-gray-800 my-1"
         >
           <div class="container max-w-xl">
             <div
@@ -104,20 +105,16 @@
               <div class="uc-navbar-left">
                 <!-- Logo  -->
                 <div class="uc-logo text-dark dark:text-white">
-                  <a
-                    class="panel text-none"
-                    style="width: 140px"
-                    href="index.html"
-                  >
+                  <a class="panel text-none" href="#">
                     <img
-                      alt="Lexend"
+                      alt="Rice Mill ERP"
                       loading="lazy"
-                      width="117"
-                      height="40"
+                      width="70"
+                      height="20"
                       decoding="async"
                       data-nimg="1"
                       class="dark:d-none"
-                      src="assets/images/common/logo-light.svg"
+                      src="assets/images/common/ricemilllogo.svg"
                     />
                   </a>
                 </div>
@@ -126,20 +123,22 @@
                 <ul
                   class="uc-navbar-nav gap-3 xl:gap-4 d-none lg:d-flex fw-medium ltr:ms-2 ltr:xl:ms-4 rtl:me-2 rtl:xl:me-4"
                 >
-                  <li><a href="page-features.html">Features</a></li>
-                  <li><a href="page-pricing.html">Pricing</a></li>
+                  <li><a href="#main_features">Features</a></li>
+                  <li>
+                    <a href="#pricing_tiers" id="nav-pricing-link">Pricing</a>
+                  </li>
                   <li><a href="page-about.html">About</a></li>
-                  <li><a href="page-contact.html">Contact</a></li>
+                  <li><a href="#uc-footer">Contact</a></li>
                 </ul>
               </div>
 
               <div class="uc-navbar-right">
-                <a class="lg:d-inline-flex" href="page-pricing.html">
-                  Request a demo
-                </a>
+                <a class="lg:d-inline-flex" href="#pricing_tiers"
+                  >Request a demo</a
+                >
                 <a
                   class="btn btn-sm btn-primary rounded-default text-white text-none d-none lg:d-inline-flex"
-                  href="page-pricing.html"
+                  href="#pricing_tiers"
                 >
                   Start free trial
                 </a>
@@ -172,23 +171,24 @@
                 <div
                   class="row child-cols justify-center lg:justify-between items-center"
                 >
-                  <div class="col-12 sm:col-10 md:col-8 lg:col-5">
+                  <div class="col-12 sm:col-10 md:col-8 lg:col-4 py-5">
                     <!-- Banner text area -->
                     <div
                       class="panel vstack gap-2 sm:text-center lg:text-start rtl:lg:text-end py-4"
                     >
                       <h1
-                        class="h2 xl:display-5 mb-1 xl:mb-2 opacity-0 translate-y-8 transition-all duration-700 banner-animate"
+                        class="h2 xl:display-6 mb-1 xl:mb-2 opacity-0 translate-y-8 transition-all duration-700 banner-animate"
                       >
-                        Tools that cover
-                        <span class="text-[#12715B]">all aspects</span> of your
-                        growing business.
+                        Streamline Your Rice Mill Operations with
+                        <span class="text-[#12715B]">Auto Rice Mill</span>
                       </h1>
                       <p
                         class="fs-6 lg:fs-5 text-dark dark:text-white text-opacity-70 opacity-0 translate-y-8 transition-all duration-700 banner-animate"
                       >
-                        This page is completely controlled by HTML. You can edit
-                        any text directly without JavaScript interference.
+                        Complete business management solution designed
+                        specifically for rice mill owners. Track sales, manage
+                        inventory, handle payroll, and monitor crushing
+                        operations - all in one powerful platform.
                       </p>
                       <form
                         method=""
@@ -197,14 +197,14 @@
                       >
                         <div class="col-span-12 sm:col-span-7">
                           <input
-                            class="form-control form-control-lg w-full bg-white dark:bg-gray-800 rounded"
+                            class="form-control form-control-sm w-full bg-white dark:bg-gray-800 rounded"
                             type="email"
                             placeholder="Your email..."
                           />
                         </div>
                         <div class="col-span-12 sm:col-span-5">
-                          <button class="btn btn-lg btn-primary w-full">
-                            Try it out for Free
+                          <button class="btn btn-sm btn-primary w-full">
+                            Start Free Trial
                           </button>
                         </div>
                       </form>
@@ -221,184 +221,12 @@
                     </div>
                   </div>
 
-                  <div class="col-12 lg:col-6">
+                  <div class="col-12 lg:col-7">
                     <div class="expand-container mt-0 lg:mt-4">
                       <img
-                        src="assets/images/template/hero-mockup.png"
+                        src="assets/images/template/dashboard.png"
                         alt="Hero Image"
                       />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Brands section -->
-        <div
-          id="companies_sponsores"
-          class="companies-sponsores section panel overflow-hidden"
-        >
-          <div class="section-outer panel py-6">
-            <div class="container sm:max-w-lg xl:max-w-xl">
-              <div class="section-inner panel">
-                <div
-                  class="brands panel overflow-hidden"
-                  data-anime="onview: true; translateY: [-16, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: 500;"
-                >
-                  <div class="block-panel panel">
-                    <div
-                      class="element-brands text-primary dark:text-white mask-x"
-                    >
-                      <div class="swiper">
-                        <div class="swiper-wrapper">
-                          <div class="swiper-slide brand-item text-center">
-                            <img
-                              alt="Proline"
-                              loading="lazy"
-                              width="165"
-                              height="48"
-                              decoding="async"
-                              data-nimg="1"
-                              class="brand-item-image h-40px image-filter"
-                              src="assets/images/brands/brand-01.svg"
-                            />
-                          </div>
-                          <div class="swiper-slide brand-item text-center">
-                            <img
-                              alt="Iceberg"
-                              loading="lazy"
-                              width="165"
-                              height="48"
-                              decoding="async"
-                              data-nimg="1"
-                              class="brand-item-image h-40px image-filter"
-                              src="assets/images/brands/brand-02.svg"
-                            />
-                          </div>
-                          <div class="swiper-slide brand-item text-center">
-                            <img
-                              alt="PinPoint"
-                              loading="lazy"
-                              width="165"
-                              height="48"
-                              decoding="async"
-                              data-nimg="1"
-                              class="brand-item-image h-40px image-filter"
-                              src="assets/images/brands/brand-03.svg"
-                            />
-                          </div>
-                          <div class="swiper-slide brand-item text-center">
-                            <img
-                              alt="Clues"
-                              loading="lazy"
-                              width="165"
-                              height="48"
-                              decoding="async"
-                              data-nimg="1"
-                              class="brand-item-image h-40px image-filter"
-                              src="assets/images/brands/brand-04.svg"
-                            />
-                          </div>
-                          <div class="swiper-slide brand-item text-center">
-                            <img
-                              alt="Snowflake"
-                              loading="lazy"
-                              width="165"
-                              height="48"
-                              decoding="async"
-                              data-nimg="1"
-                              class="brand-item-image h-40px image-filter"
-                              src="assets/images/brands/brand-05.svg"
-                            />
-                          </div>
-                          <div class="swiper-slide brand-item text-center">
-                            <img
-                              alt="Proline"
-                              loading="lazy"
-                              width="165"
-                              height="48"
-                              decoding="async"
-                              data-nimg="1"
-                              class="brand-item-image h-40px image-filter"
-                              src="assets/images/brands/brand-06.svg"
-                            />
-                          </div>
-                          <div class="swiper-slide brand-item text-center">
-                            <img
-                              alt="Proline"
-                              loading="lazy"
-                              width="165"
-                              height="48"
-                              decoding="async"
-                              data-nimg="1"
-                              class="brand-item-image h-40px image-filter"
-                              src="assets/images/brands/brand-01.svg"
-                            />
-                          </div>
-                          <div class="swiper-slide brand-item text-center">
-                            <img
-                              alt="Iceberg"
-                              loading="lazy"
-                              width="165"
-                              height="48"
-                              decoding="async"
-                              data-nimg="1"
-                              class="brand-item-image h-40px image-filter"
-                              src="assets/images/brands/brand-02.svg"
-                            />
-                          </div>
-                          <div class="swiper-slide brand-item text-center">
-                            <img
-                              alt="PinPoint"
-                              loading="lazy"
-                              width="165"
-                              height="48"
-                              decoding="async"
-                              data-nimg="1"
-                              class="brand-item-image h-40px image-filter"
-                              src="assets/images/brands/brand-03.svg"
-                            />
-                          </div>
-                          <div class="swiper-slide brand-item text-center">
-                            <img
-                              alt="Clues"
-                              loading="lazy"
-                              width="165"
-                              height="48"
-                              decoding="async"
-                              data-nimg="1"
-                              class="brand-item-image h-40px image-filter"
-                              src="assets/images/brands/brand-04.svg"
-                            />
-                          </div>
-                          <div class="swiper-slide brand-item text-center">
-                            <img
-                              alt="Snowflake"
-                              loading="lazy"
-                              width="165"
-                              height="48"
-                              decoding="async"
-                              data-nimg="1"
-                              class="brand-item-image h-40px image-filter"
-                              src="assets/images/brands/brand-05.svg"
-                            />
-                          </div>
-                          <div class="swiper-slide brand-item text-center">
-                            <img
-                              alt="Proline"
-                              loading="lazy"
-                              width="165"
-                              height="48"
-                              decoding="async"
-                              data-nimg="1"
-                              class="brand-item-image h-40px image-filter"
-                              src="assets/images/brands/brand-06.svg"
-                            />
-                          </div>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -412,7 +240,7 @@
           id="facts_numbers"
           class="facts-numbers section panel overflow-hidden"
         >
-          <div class="section-outer panel pt-4 md:pt-6 xl:pt-9">
+          <div class="section-outer panel pt-2 md:pt-4 xl:pt-7">
             <div class="container sm:max-w-lg xl:max-w-xl">
               <div class="section-inner panel">
                 <div
@@ -420,15 +248,17 @@
                   data-anime="onview: -200; targets: &gt;*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});"
                 >
                   <h2
-                    class="h4 md:h3 m-0 opacity-0 translate-y-8 transition-all duration-700 scroll-animate"
+                    class="h4 md:h3 m-0 opacity-0 translate-y-8 transition-all duration-700 scroll-animate mt-1"
                   >
-                    Everything you need is right at your fingertips
+                    Streamline Your Rice Mill Operations with Auto Rice Mill
                   </h2>
                   <p
                     class="fs-6 xl:fs-5 text-dark dark:text-white text-opacity-70 opacity-0 translate-y-8 transition-all duration-700 scroll-animate"
                   >
-                    Lexend is designed to make your work life easier and more
-                    efficient.
+                    Complete business management solution designed specifically
+                    for rice mill owners. Track sales, manage inventory, handle
+                    payroll, and monitor crushing operations - all in one
+                    powerful platform.
                   </p>
                 </div>
 
@@ -441,33 +271,39 @@
                     data-anime="onview: -200; targets: &gt;*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 500});"
                   >
                     <div>
-                      <div class="fact-item panel vstack gap-1 opacity-0 translate-y-8 transition-all duration-700 scroll-animate">
+                      <div
+                        class="fact-item panel vstack gap-1 opacity-0 translate-y-8 transition-all duration-700 scroll-animate"
+                      >
                         <h5
                           class="h3 md:h2 lg:h1 xl:display-5 m-0 text-primary dark:text-secondary"
                         >
-                          280+
+                          500+
                         </h5>
-                        <p class="fw-medium">Track of leads</p>
+                        <p class="fw-medium">Rice Mills Using Our Platform</p>
                       </div>
                     </div>
                     <div>
-                      <div class="fact-item panel vstack gap-1 opacity-0 translate-y-8 transition-all duration-700 scroll-animate">
+                      <div
+                        class="fact-item panel vstack gap-1 opacity-0 translate-y-8 transition-all duration-700 scroll-animate"
+                      >
                         <h5
                           class="h3 md:h2 lg:h1 xl:display-5 m-0 text-primary dark:text-secondary"
                         >
-                          90%
+                          ₹50Cr+
                         </h5>
-                        <p class="fw-medium">Satisfied users</p>
+                        <p class="fw-medium">Transactions Processed</p>
                       </div>
                     </div>
                     <div>
-                      <div class="fact-item panel vstack gap-1 opacity-0 translate-y-8 transition-all duration-700 scroll-animate">
+                      <div
+                        class="fact-item panel vstack gap-1 opacity-0 translate-y-8 transition-all duration-700 scroll-animate"
+                      >
                         <h5
                           class="h3 md:h2 lg:h1 xl:display-5 m-0 text-primary dark:text-secondary"
                         >
-                          10.2k
+                          99.9%
                         </h5>
-                        <p class="fw-medium">Team collaborations</p>
+                        <p class="fw-medium">Uptime Reliability</p>
                       </div>
                     </div>
                   </div>
@@ -490,16 +326,17 @@
                   data-anime="onview: -200; targets: &gt;*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});"
                 >
                   <span class="fw-bold text-primary dark:text-secondary"
-                    >Main features</span
+                    >Why Rice Mill Owners Choose Auto Rice Mill</span
                   >
                   <h2 class="h3 lg:h2 xl:h1 m-0">
-                    A CRM tools help you keep track of leads
+                    Complete Rice Mill Management Solution
                   </h2>
                   <p
                     class="fs-6 xl:fs-5 text-dark dark:text-white text-opacity-70"
                   >
-                    Join the thousands of satisfied users and take your business
-                    to the next level. Trusted by over 2,500 startups.
+                    Join hundreds of rice mill operators who have transformed
+                    their business operations and increased profitability by 40%
+                    with our specialized management system.
                   </p>
                 </div>
                 <div
@@ -544,15 +381,15 @@
                                     ><i class="icon-1 unicon-cloud-download"></i
                                   ></span>
                                   <h3 class="h4 sm:h3 xl:h2 m-0">
-                                    Ensuring timely delivery and maximum
-                                    efficiency
+                                    Complete Sales Management
                                   </h3>
                                   <p
                                     class="fs-6 lg:fs-5 opacity-70 dark:opacity-80"
                                   >
-                                    We offers advanced project management
-                                    features such as Gantt charts, task
-                                    dependencies, and resource allocation
+                                    Track daily sales, manage customer orders,
+                                    and monitor payment status in real-time.
+                                    Handle bulk orders and maintain detailed
+                                    transaction history.
                                   </p>
                                   <a
                                     href="#"
@@ -570,33 +407,31 @@
                       </div>
                     </div>
                   </div>
+                  <!-- Smart Inventory Control Start -->
                   <div>
                     <div class="feature-item panel">
                       <div
                         class="row child-cols items-center justify-between g-2 md:g-4"
                       >
-                        <div class="col-12 md:col-6 lg:col-5 md:order-2">
+                        <div class="col-12 md:col-6 lg:col-7 md:order-2">
                           <div
                             class="panel overflow-hidden rounded-1-5 lg:rounded-2"
                           >
                             <figure
-                              class="featured-image m-0 rounded ratio ratio-1x1 rounded-2 overflow-hidden"
+                              class="m-0 rounded rounded-2 overflow-hidden"
                             >
                               <img
                                 alt="Ensuring timely delivery and maximum efficiency"
                                 loading="lazy"
-                                width="1400"
-                                height="1412"
+                                class="w-full"
                                 decoding="async"
                                 data-nimg="1"
-                                class="media-cover image"
-                                style="color: transparent"
-                                src="assets/images/template/home-four-feature-02.png"
+                                src="assets/images/Features/smart-inventory.png"
                               />
                             </figure>
                           </div>
                         </div>
-                        <div class="col-12 md:col-6 lg:col-6 md:order-1">
+                        <div class="col-12 md:col-6 lg:col-5 md:order-1">
                           <div class="panel">
                             <div
                               class="panel vstack justify-center gap-4 h-100 sm:p-3 lg:p-4"
@@ -608,15 +443,15 @@
                                     ><i class="icon-1 unicon-course"></i
                                   ></span>
                                   <h3 class="h4 sm:h3 xl:h2 m-0">
-                                    No more digging endless reports and
-                                    spreadsheets
+                                    Smart Inventory Control
                                   </h3>
                                   <p
                                     class="fs-6 lg:fs-5 opacity-70 dark:opacity-80"
                                   >
-                                    An all-in-one customer service platform that
-                                    helps you balance everything your customers
-                                    need to be happy.
+                                    Monitor rice stock levels, raw material
+                                    inventory, and automated low-stock alerts.
+                                    Manage supplier relationships and track
+                                    purchase orders efficiently.
                                   </p>
                                   <a
                                     href="#"
@@ -634,6 +469,7 @@
                       </div>
                     </div>
                   </div>
+                  <!-- Smart Inventory Control End -->
                   <div>
                     <div class="feature-item panel">
                       <div
@@ -674,15 +510,15 @@
                                     ></i
                                   ></span>
                                   <h3 class="h4 sm:h3 xl:h2 m-0">
-                                    Share files, and communicate with your team
-                                    in real-time
+                                    Crushing & Production Tracking
                                   </h3>
                                   <p
                                     class="fs-6 lg:fs-5 opacity-70 dark:opacity-80"
                                   >
-                                    You can easily assign tasks, share files,
-                                    and communicate with your team in real-time,
-                                    no matter where they are located.
+                                    Manage crushing schedules, track production
+                                    efficiency, and monitor equipment status.
+                                    Get real-time reports on daily output and
+                                    quality metrics.
                                   </p>
                                   <a
                                     href="#"
@@ -738,15 +574,15 @@
                                     ><i class="icon-1 unicon-model"></i
                                   ></span>
                                   <h3 class="h4 sm:h3 xl:h2 m-0">
-                                    Collaboration is made seamless with Lexend
+                                    Financial Management
                                   </h3>
                                   <p
                                     class="fs-6 lg:fs-5 opacity-70 dark:opacity-80"
                                   >
-                                    Get real-time access to approvals, comments
-                                    and version tracking. Smart features like
-                                    variables and conditional logic help you
-                                    eliminate Tool errors.
+                                    Handle supplier payables, track expenses,
+                                    and generate comprehensive financial
+                                    reports. Monitor cash flow and profitability
+                                    with detailed analytics.
                                   </p>
                                   <a
                                     href="#"
@@ -782,11 +618,14 @@
                   class="vstack items-center gap-2 sm:max-w-600px lg:max-w-650px mx-auto text-center opacity-0 translate-y-8 transition-all duration-700 scroll-animate"
                   data-anime="onview: -200; targets: &gt;*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});"
                 >
-                  <h2 class="h3 lg:h2 m-0">Start your 30-day free trial.</h2>
+                  <h2 class="h3 lg:h2 m-0">
+                    Ready to Modernize Your Rice Mill Operations?
+                  </h2>
                   <p
                     class="fs-6 md:fs-5 xl:fs-4 text-dark dark:text-white text-opacity-70"
                   >
-                    Join over 2,500+ startups already growing with Lexend.
+                    Start your 30-day free trial today. No setup fees, no
+                    long-term contracts. See the difference in your first week.
                   </p>
                   <div
                     class="vstack sm:hstack justify-center gap-1 lg:gap-2 mt-1 lg:mt-2 flex-sm-column"
@@ -808,7 +647,7 @@
           </div>
         </div>
 
-        <!-- Simple, scalable pricing. -->
+        <!-- Pricing Plans -->
         <div
           id="pricing_tiers"
           class="pricing-tiers section panel overflow-hidden"
@@ -823,15 +662,17 @@
                     class="heading vstack gap-2 panel max-w-550px mx-auto text-center opacity-0 translate-y-8 transition-all duration-700 scroll-animate"
                     data-anime="onview: -100; targets: &gt;*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});"
                   >
-                    <span class="fw-bold text-secondary">Pricing</span>
+                    <span class="fw-bold text-secondary">Pricing Plans</span>
                     <h2 class="title h3 lg:h2 xl:h1 text-white m-0">
-                      Simple, scalable pricing.
+                      Simple, transparent pricing for every rice mill
                     </h2>
                     <p class="fs-6 xl:fs-5 text-white text-opacity-70">
-                      No extra charges. No hidden fees.
+                      Choose the plan that fits your mill size. No hidden fees.
                     </p>
                   </div>
-                  <div class="content panel opacity-0 translate-y-8 transition-all duration-700 scroll-animate">
+                  <div
+                    class="content panel opacity-0 translate-y-8 transition-all duration-700 scroll-animate"
+                  >
                     <div
                       class="row child-cols-12 sm:child-cols-6 xl:child-cols-4 col-match justify-center g-2 lg:g-4"
                       data-anime="onview: -100; targets: &gt;*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 400});"
@@ -848,17 +689,17 @@
                               ><i class="icon-1 unicon-sub-volume fw-bold"></i
                             ></span>
                             <h5 class="h5 lg:h4 m-0 text-primary">
-                              Basic plan
+                              Small Mill
                             </h5>
                             <div class="d-flex gap-narrow items-end mt-1">
                               <h3 class="h1 lg:display-6 price m-0 text-dark">
-                                $49
+                                ₹2,999
                               </h3>
                               <span class="h6 lg:h3 m-0 pb-narrow text-dark"
                                 >/ mo</span
                               >
                             </div>
-                            <p class="desc">Billed annually.</p>
+                            <p class="desc">Perfect for small operations.</p>
                           </header>
                           <div class="tier-body p-3 md:p-4">
                             <ul class="nav-y gap-2 text-start">
@@ -866,8 +707,14 @@
                                 <i
                                   class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"
                                 ></i
+                                ><span class="d-inline">Up to 5 users</span>
+                              </li>
+                              <li class="hstack items-start gap-1">
+                                <i
+                                  class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"
+                                ></i
                                 ><span class="d-inline"
-                                  >Up to 10 individual users</span
+                                  >Sales & Purchase Management</span
                                 >
                               </li>
                               <li class="hstack items-start gap-1">
@@ -875,32 +722,20 @@
                                   class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"
                                 ></i
                                 ><span class="d-inline"
-                                  >Basic reporting and analytics</span
+                                  >Basic Inventory Tracking</span
                                 >
                               </li>
                               <li class="hstack items-start gap-1">
                                 <i
                                   class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"
                                 ></i
-                                ><span class="d-inline"
-                                  >Project Management</span
-                                >
+                                ><span class="d-inline">Monthly Reports</span>
                               </li>
                               <li class="hstack items-start gap-1">
                                 <i
                                   class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"
                                 ></i
-                                ><span class="d-inline"
-                                  >20GB individual data each user</span
-                                >
-                              </li>
-                              <li class="hstack items-start gap-1">
-                                <i
-                                  class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"
-                                ></i
-                                ><span class="d-inline"
-                                  >Basic chat and email support</span
-                                >
+                                ><span class="d-inline">Email Support</span>
                               </li>
                             </ul>
                           </div>
@@ -929,17 +764,17 @@
                               ><i class="icon-1 unicon-course fw-bold"></i
                             ></span>
                             <h5 class="h5 lg:h4 m-0 text-primary">
-                              Business plan
+                              Medium Mill
                             </h5>
                             <div class="d-flex gap-narrow items-end mt-1">
                               <h3 class="h1 lg:display-6 price m-0 text-dark">
-                                $79
+                                ₹4,999
                               </h3>
                               <span class="h6 lg:h3 m-0 pb-narrow text-dark"
                                 >/ mo</span
                               >
                             </div>
-                            <p class="desc">Billed annually.</p>
+                            <p class="desc">Most popular choice.</p>
                           </header>
                           <div class="tier-body p-3 md:p-4">
                             <ul class="nav-y gap-2 text-start">
@@ -948,29 +783,21 @@
                                   class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"
                                 ></i
                                 ><span class="d-inline"
-                                  >Access to all <b>Basic</b> features</span
+                                  >All <b>Small Mill</b> features</span
                                 >
                               </li>
                               <li class="hstack items-start gap-1">
                                 <i
                                   class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"
                                 ></i
-                                ><span class="d-inline">200+ integrations</span>
+                                ><span class="d-inline">Up to 15 users</span>
                               </li>
                               <li class="hstack items-start gap-1">
                                 <i
                                   class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"
                                 ></i
                                 ><span class="d-inline"
-                                  >Unlimited team workspaces</span
-                                >
-                              </li>
-                              <li class="hstack items-start gap-1">
-                                <i
-                                  class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"
-                                ></i
-                                ><span class="d-inline"
-                                  >Approval workflows</span
+                                  >Advanced Crushing Management</span
                                 >
                               </li>
                               <li class="hstack items-start gap-1">
@@ -978,7 +805,15 @@
                                   class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"
                                 ></i
                                 ><span class="d-inline"
-                                  >Salesforce integration*</span
+                                  >Financial Reports & Analytics</span
+                                >
+                              </li>
+                              <li class="hstack items-start gap-1">
+                                <i
+                                  class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"
+                                ></i
+                                ><span class="d-inline"
+                                  >Phone & Email Support</span
                                 >
                               </li>
                             </ul>
@@ -1004,17 +839,17 @@
                               ><i class="icon-1 unicon-building fw-bold"></i
                             ></span>
                             <h5 class="h5 lg:h4 m-0 text-primary">
-                              Enterprise plan
+                              Large Mill
                             </h5>
                             <div class="d-flex gap-narrow items-end mt-1">
                               <h3 class="h1 lg:display-6 price m-0 text-dark">
-                                $199
+                                ₹9,999
                               </h3>
                               <span class="h6 lg:h3 m-0 pb-narrow text-dark"
                                 >/ mo</span
                               >
                             </div>
-                            <p class="desc">Billed annually.</p>
+                            <p class="desc">For large operations.</p>
                           </header>
                           <div class="tier-body p-3 md:p-4">
                             <ul class="nav-y gap-2 text-start">
@@ -1023,7 +858,21 @@
                                   class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"
                                 ></i
                                 ><span class="d-inline"
-                                  >Access to all <b>Business</b> features</span
+                                  >All <b>Medium Mill</b> features</span
+                                >
+                              </li>
+                              <li class="hstack items-start gap-1">
+                                <i
+                                  class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"
+                                ></i
+                                ><span class="d-inline">Unlimited users</span>
+                              </li>
+                              <li class="hstack items-start gap-1">
+                                <i
+                                  class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"
+                                ></i
+                                ><span class="d-inline"
+                                  >Multi-location management</span
                                 >
                               </li>
                               <li class="hstack items-start gap-1">
@@ -1031,7 +880,7 @@
                                   class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"
                                 ></i
                                 ><span class="d-inline"
-                                  >Unlimited files uploads</span
+                                  >Custom integrations & API access</span
                                 >
                               </li>
                               <li class="hstack items-start gap-1">
@@ -1039,22 +888,8 @@
                                   class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"
                                 ></i
                                 ><span class="d-inline"
-                                  >Real-time team collaboration</span
+                                  >24/7 Priority Support</span
                                 >
-                              </li>
-                              <li class="hstack items-start gap-1">
-                                <i
-                                  class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"
-                                ></i
-                                ><span class="d-inline"
-                                  >SSO support and custom user roles</span
-                                >
-                              </li>
-                              <li class="hstack items-start gap-1">
-                                <i
-                                  class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"
-                                ></i
-                                ><span class="d-inline">Bulk send & Forms</span>
                               </li>
                             </ul>
                           </div>
@@ -1142,11 +977,12 @@
                                 <p
                                   class="fs-5 lg:fs-4 xl:fs-3 fw-medium text-dark dark:text-white"
                                 >
-                                  “We are based in Europe and the latest Data
-                                  Protection Regulation forces us to look for
-                                  service suppliers than comply with this
-                                  regulation and as we look to create our
-                                  website and this builder just outstanding!”
+                                  “Auto Rice Mill has completely transformed how
+                                  we manage our business. From tracking daily
+                                  crushing operations to managing supplier
+                                  payments, everything is now organized and
+                                  efficient. Our productivity has increased by
+                                  35%.”
                                 </p>
                               </div>
                               <!-- Footer -->
@@ -1154,9 +990,9 @@
                                 <div
                                   class="panel vstack items-start gap-0 lg:gap-1"
                                 >
-                                  <h6 class="h6 lg:h5 m-0">Sarah Edrissi</h6>
+                                  <h6 class="h6 lg:h5 m-0">Mohammad Rahman</h6>
                                   <span class="fs-7 lg:h6 opacity-70"
-                                    >Lead Marketing</span
+                                    >Rahman Rice Mills</span
                                   >
                                 </div>
                               </div>
@@ -1209,7 +1045,9 @@
 
         <!-- Frequently Asked Questions -->
         <div id="faq" class="section panel overflow-hidden">
-          <div class="section-outer panel py-4 md:py-6 xl:py-9 opacity-0 translate-y-8 transition-all duration-700 scroll-animate">
+          <div
+            class="section-outer panel py-4 md:py-6 xl:py-9 opacity-0 translate-y-8 transition-all duration-700 scroll-animate"
+          >
             <div class="container max-w-md">
               <div
                 class="section-inner panel"
@@ -1220,7 +1058,7 @@
                   style="transform: translateY(0px); opacity: 1"
                 >
                   <h2 class="h4 sm:h3 lg:h2 m-0 text-center">
-                    Frequenlty asked questions:
+                    Frequently asked questions about Auto Rice Mill:
                   </h2>
                   <div class="panel">
                     <ul
@@ -1234,13 +1072,13 @@
                           class="uc-accordion-title fs-5 sm:fs-4"
                           role="button"
                           aria-disabled="false"
-                          >Do I need to know about how to code?</a
+                          >Is there a free trial available?</a
                         >
                         <div class="uc-accordion-content">
                           <p>
-                            Yes, you need to have a fair amount of knowledge in
-                            dealing with HTML/CSS as well as JavaScript in order
-                            to be able to use Lexend.
+                            Yes, we offer a 30-day free trial so you can explore
+                            all features and see how Auto Rice Mill works for
+                            your business before making any commitment.
                           </p>
                         </div>
                       </li>
@@ -1331,7 +1169,9 @@
           id="about-team"
           class="about-team section panel overflow-hidden border-top"
         >
-          <div class="section-outer panel py-4 md:py-6 xl:py-9 opacity-0 translate-y-8 transition-all duration-700 scroll-animate">
+          <div
+            class="section-outer panel py-4 md:py-6 xl:py-9 opacity-0 translate-y-8 transition-all duration-700 scroll-animate"
+          >
             <div class="container max-w-lg">
               <div class="section-inner panel">
                 <div
@@ -1564,7 +1404,9 @@
           id="blog_posts"
           class="section panel overflow-hidden gap-3 bg-secondary dark:bg-gray-800 rounded-1-5 lg:rounded-2"
         >
-          <div class="section-outer panel py-4 md:py-6 xl:py-9 opacity-0 translate-y-8 transition-all duration-700 scroll-animate">
+          <div
+            class="section-outer panel py-4 md:py-6 xl:py-9 opacity-0 translate-y-8 transition-all duration-700 scroll-animate"
+          >
             <div class="container max-w-xl">
               <div class="section-inner panel">
                 <div
@@ -1577,10 +1419,10 @@
                   >
                     <div class="vstack gap-2">
                       <span class="fw-bold text-primary dark:text-secondary"
-                        >Our insights</span
+                        >Industry Updates</span
                       >
                       <h2 class="title h3 lg:h2 xl:h1 m-0">
-                        Latest posts and updates
+                        Rice Mill Industry News & Tips
                       </h2>
                     </div>
                     <div>
@@ -1825,7 +1667,9 @@
 
         <!-- Contracts -->
         <div id="cta" class="cta section panel overflow-hidden">
-          <div class="section-outer panel pt-4 sm:pt-6 xl:pt-9 opacity-0 translate-y-8 transition-all duration-700 scroll-animate">
+          <div
+            class="section-outer panel pt-4 sm:pt-6 xl:pt-9 opacity-0 translate-y-8 transition-all duration-700 scroll-animate"
+          >
             <div class="container max-w-xl">
               <div class="section-inner">
                 <div
@@ -1833,12 +1677,13 @@
                   data-anime="onview:-100; targets: &gt;*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});"
                 >
                   <h2 class="h4 lg:h3 m-0">
-                    No long-term contracts. No catches. Simple.
+                    Ready to Transform Your Rice Mill Business?
                   </h2>
                   <p
                     class="fs-6 sm:fs-5 text-dark dark:text-white text-opacity-70 mt-1 lg:mt-2"
                   >
-                    Start your 30-day free trial. Cancel anytime.
+                    Join hundreds of rice mill owners who have modernized their
+                    operations with Auto Rice Mill.
                   </p>
                   <div
                     class="vstack sm:hstack justify-center gap-1 lg:gap-2 mt-2 lg:mt-4 fdr"
@@ -1857,7 +1702,8 @@
                   <p
                     class="fs-7 text-dark dark:text-white text-opacity-70 mt-2"
                   >
-                    14-day trial, no credit card required.
+                    30-day trial, no credit card required. Complete setup
+                    assistance included.
                   </p>
                 </div>
               </div>
@@ -2118,69 +1964,6 @@
       </svg>
     </button>
     <!-- Script for Scroll to Top Button -->
-    <script>
-      const scrollBtn = document.getElementById("scrollToTopBtn");
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 200) {
-          scrollBtn.classList.remove(
-            "opacity-0",
-            "pointer-events-none",
-            "translate-y-8"
-          );
-          scrollBtn.classList.add("opacity-100", "translate-y-0");
-        } else {
-          scrollBtn.classList.add(
-            "opacity-0",
-            "pointer-events-none",
-            "translate-y-8" // translate-y-8 means move the element down by 2rem (32px) (transform: translateY(2rem);).
-          );
-          scrollBtn.classList.remove("opacity-100", "translate-y-0");
-        }
-      });
-      scrollBtn.addEventListener("click", () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      });
-    </script>
-
-    <!-- Script for Banner Text Animation Script -->
-    <script>
-      window.addEventListener("DOMContentLoaded", function () {
-        const bannerElements = document.querySelectorAll(".banner-animate");
-        setTimeout(function () {
-          bannerElements.forEach((element, index) => {
-            setTimeout(() => {
-              element.classList.add("opacity-100", "translate-y-0");
-              element.classList.remove("opacity-0", "translate-y-8");
-            }, index * 150); // Stagger animation by 150ms for each element
-          });
-        }, 100);
-      });
-    </script>
-
-    <!-- Script for Scroll-triggered Animation -->
-    <script>
-      window.addEventListener("DOMContentLoaded", function () {
-        const scrollElements = document.querySelectorAll(".scroll-animate");
-
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("opacity-100", "translate-y-0");
-                entry.target.classList.remove("opacity-0", "translate-y-8");
-              }
-            });
-          },
-          {
-            threshold: 0.1,
-            rootMargin: "0px 0px -50px 0px",
-          }
-        );
-
-        scrollElements.forEach((element) => {
-          observer.observe(element);
-        });
-      });
-    </script>
+    <script src="js/animation.js"></script>
   </body>
 </html>
