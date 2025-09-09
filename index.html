@@ -4,33 +4,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- CSS Files (keeping the styling) -->
-    <link
-      rel="stylesheet"
-      href="_next/static/css/580c6d15b2e8821a.css"
-      data-precedence="next"
-    />
-    <link
-      rel="stylesheet"
-      href="_next/static/css/f8186080b0f49813.css"
-      data-precedence="next"
-    />
-    <link
-      rel="stylesheet"
-      href="_next/static/css/ba5338205a49a541.css"
-      data-precedence="next"
-    />
-    <link
-      rel="stylesheet"
-      href="_next/static/css/9af76e3f68d33df7.css"
-      data-precedence="next"
-    />
-    <link
-      rel="stylesheet"
-      href="_next/static/css/9b880acc5c9e57a6.css"
-      data-precedence="next"
-    />
-
     <title>Auto Rice Mill</title>
     <meta
       name="description"
@@ -46,11 +19,30 @@
           extend: {
             colors: {
               primary: {
-                50: "#eff6ff",
-                500: "#3b82f6",
-                600: "#2563eb",
-                700: "#1d4ed8",
+                50: "#e7f1ef",
+                100: "#cfe4e0",
+                200: "#9fc9c0",
+                300: "#6fad9f",
+                400: "#3f927f",
+                500: "#0F604D",
+                600: "#0c4d3d",
+                700: "#093a2e",
+                800: "#06261e",
+                900: "#03130f",
               },
+              secondary: {
+                50: "#fef7ed",
+                100: "#fdeedc",
+                200: "#fbddba",
+                300: "#f8cc97",
+                400: "#f6bb75",
+                500: "#F5EEE9",
+                600: "#c4b8b4",
+                700: "#938a87",
+                800: "#625c5a",
+                900: "#312e2d",
+              },
+              success: "#12715B",
             },
           },
         },
@@ -58,181 +50,249 @@
     </script>
 
     <!-- Custom CSS for full HTML control -->
-    <style>
-      /* Ensure all navigation elements are fully controlled by HTML */
-      .uc-navbar-nav li a {
-        pointer-events: auto !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-      }
-
-      /* Prevent any pseudo-element content replacement */
-      .uc-navbar-nav *::before,
-      .uc-navbar-nav *::after {
-        content: none !important;
-      }
-
-      /* Ensure text content is not overridden */
-      .uc-navbar-nav {
-        font-family: inherit !important;
-        color: inherit !important;
-      }
-
-      /* Responsive navigation */
-      @media (max-width: 1023px) {
-        .uc-navbar-nav {
-          display: none !important;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="./style/index.css" />
   </head>
 
   <body>
-    <div
-      class="page-wrapper uni-body panel bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-200 overflow-x-hidden"
-    >
+    <div class="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-200">
       <!-- Header -->
-      <header
-        style="--uc-nav-height: 80px !important"
-        class="uc-header header-default uc-navbar-sticky-wrap z-999"
-      >
-        <nav
-          class="uc-navbar-container uc-navbar-float ft-tertiary z-1 bg-secondary dark:bg-gray-800 my-1"
+      <div class="bg-[#F5EEE9]">
+        <header
+          class="max-w-7xl mx-auto sm:px-6 lg:px-6 dark:bg-gray-800 shadow-sm pt-2 px-2"
         >
-          <div class="container max-w-xl">
+          <nav class="flex items-center justify-between h-16">
+            <!-- Logo -->
+            <a class="text-none" href="#">
+              <img
+                alt="Rice Mill ERP"
+                loading="lazy"
+                width="70"
+                height="20"
+                decoding="async"
+                data-nimg="1"
+                class="dark:d-none"
+                src="assets/images/common/ricemilllogo.svg"
+              />
+            </a>
+
+            <!-- Nav links -->
             <div
-              class="uc-navbar min-h-64px lg:min-h-80px text-gray-900 dark:text-white"
+              class="hidden md:flex items-center md:gap-4 lg:gap-8 text-[15px]"
             >
-              <div class="uc-navbar-left">
-                <!-- Logo  -->
-                <div class="uc-logo text-dark dark:text-white">
-                  <a class="panel text-none" href="#">
-                    <img
-                      alt="Rice Mill ERP"
-                      loading="lazy"
-                      width="70"
-                      height="20"
-                      decoding="async"
-                      data-nimg="1"
-                      class="dark:d-none"
-                      src="assets/images/common/ricemilllogo.svg"
-                    />
-                  </a>
-                </div>
-
-                <!-- Navigation Menu - Simple Links Only -->
-                <ul
-                  class="uc-navbar-nav gap-3 xl:gap-4 d-none lg:d-flex fw-medium ltr:ms-2 ltr:xl:ms-4 rtl:me-2 rtl:xl:me-4"
-                >
-                  <li><a href="#main_features">Features</a></li>
-                  <li>
-                    <a href="#pricing_tiers" id="nav-pricing-link">Pricing</a>
-                  </li>
-                  <li><a href="page-about.html">About</a></li>
-                  <li><a href="#uc-footer">Contact</a></li>
-                </ul>
-              </div>
-
-              <div class="uc-navbar-right">
-                <a class="lg:d-inline-flex" href="#pricing_tiers"
-                  >Request a demo</a
-                >
-                <a
-                  class="btn btn-sm btn-primary rounded-default text-white text-none d-none lg:d-inline-flex"
-                  href="#pricing_tiers"
-                >
-                  Start free trial
-                </a>
-
-                <!-- Mobile menu toggle (simple version) -->
-                <a class="d-block lg:d-none uc-icon uc-navbar-toggle-icon">
-                  <svg width="20" height="20" viewBox="0 0 20 20">
-                    <rect y="3" width="20" height="2"></rect>
-                    <rect y="9" width="20" height="2"></rect>
-                    <rect y="15" width="20" height="2"></rect>
-                  </svg>
-                </a>
-              </div>
+              <a href="#features" class="font-semibold">Features</a>
+              <a href="#benefits" class="font-semibold">Benefits</a>
+              <a href="#pricing" class="font-semibold">Pricing</a>
+              <a href="#contact" class="font-semibold">Contact</a>
             </div>
+
+            <!-- Action buttons -->
+            <div class="hidden md:flex items-center gap-3">
+              <a
+                class="inline-flex items-center justify-center px-3 py-2 text-sm font-medium text-white bg-primary-500 hover:bg-primary-600 rounded-lg transition-colors duration-200 no-underline"
+                href="#pricing_tiers"
+              >
+                Start free trial
+              </a>
+            </div>
+
+            <!-- Mobile drawer toggle (show on < md) -->
+            <button
+              id="navToggle"
+              class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-full bg-primary-600 text-white hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-600"
+              aria-controls="mobileDrawer"
+              aria-expanded="false"
+              aria-label="Open menu"
+            >
+              <!-- hamburger -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-5"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </nav>
+        </header>
+      </div>
+
+      <!-- Mobile Drawer Overlay -->
+      <div
+        id="drawerOverlay"
+        class="fixed inset-0 bg-black/40 opacity-0 pointer-events-none transition-opacity duration-300 z-[70]"
+      ></div>
+
+      <!-- Mobile Drawer Panel -->
+      <aside
+        id="mobileDrawer"
+        class="fixed top-0 right-0 h-full w-80 max-w-[85%] bg-white dark:bg-gray-900 shadow-xl border-l border-gray-200 dark:border-gray-700 translate-x-full transition-transform duration-300 ease-out z-[75] flex flex-col"
+        aria-hidden="true"
+      >
+        <div
+          class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-700"
+        >
+          <img
+            alt="Rice Mill ERP"
+            loading="lazy"
+            width="90"
+            height="24"
+            class="dark:d-none"
+            src="assets/images/common/ricemilllogo.svg"
+          />
+          <button
+            id="navClose"
+            class="inline-flex items-center justify-center w-9 h-9 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800"
+            aria-label="Close menu"
+          >
+            <!-- X icon -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-5 h-5"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Drawer content -->
+        <nav class="px-4 py-4 grow">
+          <ul class="space-y-2 text-[15px]">
+            <li>
+              <a
+                href="#features"
+                class="block px-3 py-2 rounded hover:bg-gray-50 dark:hover:bg-gray-800"
+                >Features</a
+              >
+            </li>
+            <li>
+              <a
+                href="#benefits"
+                class="block px-3 py-2 rounded hover:bg-gray-50 dark:hover:bg-gray-800"
+                >Benefits</a
+              >
+            </li>
+            <li>
+              <a
+                href="#pricing"
+                class="block px-3 py-2 rounded hover:bg-gray-50 dark:hover:bg-gray-800"
+                >Pricing</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="block px-3 py-2 rounded hover:bg-gray-50 dark:hover:bg-gray-800"
+                >Contact</a
+              >
+            </li>
+          </ul>
+
+          <div class="mt-6">
+            <a
+              href="#pricing_tiers"
+              class="inline-flex items-center justify-center w-full px-4 py-3 text-base font-medium text-white bg-primary-500 hover:bg-primary-600 rounded-lg transition-colors duration-200 no-underline"
+            >
+              Start free trial
+            </a>
           </div>
         </nav>
-      </header>
+
+        <!-- Optional footer inside drawer -->
+        <div class="px-4 py-3 border-t border-gray-200 dark:border-gray-700">
+          <p class="text-xs text-gray-500 dark:text-gray-400">
+            © 2025 Auto Rice Mill
+          </p>
+        </div>
+      </aside>
 
       <!-- Main Content Area -->
-      <div id="wrapper" class="wrap">
+      <div id="wrapper" class="">
         <!-- Hero section -->
-        <div
-          id="hero_header"
-          class="hero-header section panel overflow-hidden bg-secondary dark:bg-gray-800"
-        >
-          <div class="position-cover"></div>
-          <div class="section-outer panel pt-8">
-            <div class="container max-w-xl">
-              <div class="section-inner panel">
+        <div id="hero_header" class="bg-[#F5EEE9] dark:bg-gray-800">
+          <div class="pt-1 lg:pt-8">
+            <div class="max-w-7xl mx-auto sm:px-6 lg:px-6">
+              <div
+                class="grid grid-cols-12 gap-4 px-2 justify-center lg:justify-between items-center pb-3"
+              >
                 <div
-                  class="grid grid-cols-12 justify-center lg:justify-between items-center"
+                  class="col-span-12 lg:col-span-5 xl:col-span-6 lg:py-5"
                 >
+                  <!-- Banner text area -->
                   <div
-                    class="col-span-12 md:col-span-12 lg:col-span-5 xl:col-span-6 py-5"
+                    class="panel gap-2 sm:text-center lg:text-start rtl:lg:text-end py-4"
                   >
-                    <!-- Banner text area -->
-                    <div
-                      class="panel vstack gap-2 sm:text-center lg:text-start rtl:lg:text-end py-4"
+                    <h1
+                      class="text-2xl md:text-3xl xl:text-5xl font-bold mb-1 xl:mb-2 opacity-0 translate-y-8 transition-all duration-700 banner-animate"
                     >
-                      <h1
-                        class="h2 xl:display-6 mb-1 xl:mb-2 opacity-0 translate-y-8 transition-all duration-700 banner-animate"
-                      >
-                        Streamline Your Rice Mill Operations with
-                        <span class="text-[#12715B]">Auto Rice Mill</span>
-                      </h1>
-                      <p
-                        class="fs-6 lg:fs-5 text-dark dark:text-white text-opacity-70 opacity-0 translate-y-8 transition-all duration-700 banner-animate"
-                      >
-                        Complete business management solution designed
-                        specifically for rice mill owners. Track sales, manage
-                        inventory, handle payroll, and monitor crushing
-                        operations - all in one powerful platform.
-                      </p>
-                      <form
-                        method=""
-                        actions=""
-                        class="grid grid-cols-12 gap-1 mt-1 sm:mt-2 opacity-0 translate-y-8 transition-all duration-700 banner-animate"
-                      >
-                        <div class="col-span-12 sm:col-span-7">
-                          <input
-                            class="form-control form-control-sm w-full bg-white dark:bg-gray-800 rounded"
-                            type="email"
-                            placeholder="Your email..."
-                          />
-                        </div>
-                        <div class="col-span-12 sm:col-span-5">
-                          <button class="btn btn-sm btn-primary w-full">
-                            Start Free Trial
-                          </button>
-                        </div>
-                      </form>
-                      <p
-                        class="fs-7 text-dark dark:text-white text-opacity-70 opacity-0 translate-y-8 transition-all duration-700 banner-animate"
-                      >
-                        We care about your data in our
-                        <a
-                          class="uc-link text-underline dark:text-secondary"
-                          href="page-privacy.html"
-                          >privacy policy</a
-                        >.
-                      </p>
-                    </div>
+                      Streamline Your Rice Mill Operations with
+                      <span class="text-[#12715B]">Auto Rice Mill</span>
+                    </h1>
+                    <p
+                      class="text-sm lg:text-base text-dark dark:text-white text-opacity-70 opacity-0 translate-y-8 transition-all duration-700 banner-animate"
+                    >
+                      Complete business management solution designed
+                      specifically for rice mill owners. Track sales, manage
+                      inventory, handle payroll, and monitor crushing operations
+                      - all in one powerful platform.
+                    </p>
+                    <form
+                      method=""
+                      actions=""
+                      class="grid grid-cols-1 lg:grid-cols-2 gap-1 mt-1 sm:mt-2 opacity-0 translate-y-8 transition-all duration-700 banner-animate"
+                    >
+                      <div class="">
+                        <input
+                          class="p-1 w-full bg-white border border-gray-300 rounded"
+                          type="email"
+                          placeholder="Your email..."
+                        />
+                      </div>
+                      <div class="">
+                        <button
+                          class="p-1 rounded bg-[#0F604D] text-white w-full font-bold"
+                        >
+                          Start Free Trial
+                        </button>
+                      </div>
+                    </form>
+                    <p
+                      class="text-gray-600 dark:text-gray-300 opacity-0 translate-y-8 transition-all duration-700 banner-animate mt-1 text-sm"
+                    >
+                      We care about your data in our
+                      <a
+                        class="underline text-primary-600 hover:text-primary-700 transition-colors duration-200"
+                        href="page-privacy.html"
+                        >privacy policy</a
+                      >.
+                    </p>
                   </div>
+                </div>
 
-                  <div
-                    class="col-span-12 md:col-span-12 lg:col-span-7 xl:col-span-6"
-                  >
-                    <div class="expand-container mt-0 lg:mt-4">
-                      <img
-                        src="assets/images/template/dashboard.png"
-                        alt="Hero Image"
-                      />
-                    </div>
+                <!-- Hero Image -->
+                <div
+                  class="col-span-12 md:col-span-12 lg:col-span-7 xl:col-span-6"
+                >
+                  <div class="expand-container mt-0 lg:mt-4 ">
+                    <img
+                      src="assets/images/template/dashboard.png"
+                      alt="Hero Image"
+                      class="rounded-lg shadow-lg"
+                    />
                   </div>
                 </div>
               </div>
@@ -240,78 +300,62 @@
           </div>
         </div>
 
-        <!-- Everything you need is right at your fingertips -->
-        <div
-          id="facts_numbers"
-          class="facts-numbers section panel overflow-hidden"
-        >
-          <div class="section-outer panel pt-2 md:pt-4 xl:pt-7">
-            <div class="container sm:max-w-lg xl:max-w-xl">
-              <div class="section-inner panel">
-                <div
-                  class="panel vstack items-center gap-2 mb-4 lg:mb-8 max-w-800px mx-auto text-center"
-                  data-anime="onview: -200; targets: &gt;*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});"
-                >
-                  <h2
-                    class="h4 md:h3 m-0 opacity-0 translate-y-8 transition-all duration-700 scroll-animate mt-1"
+        <!-- Stats Section -->
+        <div id="facts_numbers" class="py-16 md:py-20 dark:bg-gray-900">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Header -->
+            <div class="text-center mb-12 max-w-3xl mx-auto">
+              <h2
+                class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6"
+              >
+                Streamline Your Rice Mill Operations with Auto Rice Mill
+              </h2>
+              <p
+                class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed"
+              >
+                Complete business management solution designed specifically for
+                rice mill owners. Track sales, manage inventory, handle payroll,
+                and monitor crushing operations - all in one powerful platform.
+              </p>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="bg-[#F5EEE9] rounded-2xl p-8 md:p-12">
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Stat 1 -->
+                <div class="text-center">
+                  <div
+                    class="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-600 dark:text-primary-400 mb-2"
                   >
-                    Streamline Your Rice Mill Operations with Auto Rice Mill
-                  </h2>
-                  <p
-                    class="fs-6 xl:fs-5 text-dark dark:text-white text-opacity-70 opacity-0 translate-y-8 transition-all duration-700 scroll-animate"
-                  >
-                    Complete business management solution designed specifically
-                    for rice mill owners. Track sales, manage inventory, handle
-                    payroll, and monitor crushing operations - all in one
-                    powerful platform.
+                    500+
+                  </div>
+                  <p class="text-gray-900 dark:text-white font-medium text-lg">
+                    Rice Mills Using Our Platform
                   </p>
                 </div>
 
-                <div
-                  class="panel p-6 xl:p-8 rounded-1-5 lg:rounded-2 bg-secondary dark:bg-gray-800"
-                  data-anime="onview: -200; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: 350;"
-                >
+                <!-- Stat 2 -->
+                <div class="text-center">
                   <div
-                    class="row child-cols col-match items-center justify-center text-center gy-4 lg:gy-8"
-                    data-anime="onview: -200; targets: &gt;*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 500});"
+                    class="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-600 dark:text-primary-400 mb-2"
                   >
-                    <div>
-                      <div
-                        class="fact-item panel vstack gap-1 opacity-0 translate-y-8 transition-all duration-700 scroll-animate"
-                      >
-                        <h5
-                          class="h3 md:h2 lg:h1 xl:display-5 m-0 text-primary dark:text-secondary"
-                        >
-                          500+
-                        </h5>
-                        <p class="fw-medium">Rice Mills Using Our Platform</p>
-                      </div>
-                    </div>
-                    <div>
-                      <div
-                        class="fact-item panel vstack gap-1 opacity-0 translate-y-8 transition-all duration-700 scroll-animate"
-                      >
-                        <h5
-                          class="h3 md:h2 lg:h1 xl:display-5 m-0 text-primary dark:text-secondary"
-                        >
-                          ৳50Cr+
-                        </h5>
-                        <p class="fw-medium">Transactions Processed</p>
-                      </div>
-                    </div>
-                    <div>
-                      <div
-                        class="fact-item panel vstack gap-1 opacity-0 translate-y-8 transition-all duration-700 scroll-animate"
-                      >
-                        <h5
-                          class="h3 md:h2 lg:h1 xl:display-5 m-0 text-primary dark:text-secondary"
-                        >
-                          99.9%
-                        </h5>
-                        <p class="fw-medium">Uptime Reliability</p>
-                      </div>
-                    </div>
+                    ৳ 50Cr+
                   </div>
+                  <p class="text-gray-900 dark:text-white font-medium text-lg">
+                    Transactions Processed
+                  </p>
+                </div>
+
+                <!-- Stat 3 -->
+                <div class="text-center">
+                  <div
+                    class="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-600 dark:text-primary-400 mb-2"
+                  >
+                    99.9%
+                  </div>
+                  <p class="text-gray-900 dark:text-white font-medium text-lg">
+                    Uptime Reliability
+                  </p>
                 </div>
               </div>
             </div>
@@ -319,291 +363,286 @@
         </div>
 
         <!-- Main features -->
-        <div
-          id="main_features"
-          class="main-features section panel overflow-hidden"
-        >
-          <div class="section-outer panel py-4 md:py-6 xl:py-9">
-            <div class="container sm:max-w-lg xl:max-w-xl">
-              <div class="section-inner panel">
-                <div
-                  class="panel vstack items-center gap-2 xl:gap-3 mb-4 lg:mb-8 max-w-650px mx-auto text-center opacity-0 translate-y-8 transition-all duration-700 scroll-animate"
-                  data-anime="onview: -200; targets: &gt;*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});"
+        <div id="main_features" class="px-2 xl:px-8">
+          <div class="py-4 md:py-6 xl:py-9">
+            <div class="">
+              <!-- Section Content -->
+              <div
+                class="text-center opacity-0 translate-y-8 transition-all duration-700 scroll-animate mb-28"
+                data-anime="onview: -200; targets: &gt;*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});"
+              >
+                <h1 class="text-lg text-[#0C4D3D]">
+                  Why Rice Mill Owners Choose Auto Rice Mill
+                </h1>
+                <h2 class="text-4xl font-bold mb-2">
+                  Complete Rice Mill Management Solution
+                </h2>
+                <p
+                  class="fs-6 xl:fs-5 text-dark dark:text-white text-opacity-70"
                 >
-                  <span class="fw-bold text-primary dark:text-secondary"
-                    >Why Rice Mill Owners Choose Auto Rice Mill</span
+                  Join hundreds of rice mill operators who have transformed
+                  their business operations and increased profitability by 40%
+                  with our specialized management system.
+                </p>
+              </div>
+              <div class="">
+                <!-- Complete Sales Management Start -->
+                <div
+                  class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm mb-16"
+                >
+                  <div
+                    class="grid grid-cols-1 md:grid-cols-2 items-center gap-4"
                   >
-                  <h2 class="h3 lg:h2 xl:h1 m-0">
-                    Complete Rice Mill Management Solution
-                  </h2>
-                  <p
-                    class="fs-6 xl:fs-5 text-dark dark:text-white text-opacity-70"
-                  >
-                    Join hundreds of rice mill operators who have transformed
-                    their business operations and increased profitability by 40%
-                    with our specialized management system.
-                  </p>
+                    <!-- Image -->
+                    <div class="">
+                      <div class="rounded-xl">
+                        <img
+                          alt="Complete Sales Management Dashboard"
+                          loading="lazy"
+                          decoding="async"
+                          class="w-full h-auto object-cover"
+                          src="assets/images/Features/sales-management.png"
+                        />
+                      </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="text-center">
+                      <div class="space-y-6">
+                        <!-- Icon -->
+                        <div
+                          class="inline-flex items-center justify-center w-12 h-12 bg-primary-600 text-white rounded-xl"
+                        >
+                          <i
+                            data-lucide="badge-dollar-sign"
+                            class="w-6 h-6"
+                          ></i>
+                        </div>
+
+                        <!-- Title -->
+                        <h3
+                          class="text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 dark:text-white"
+                        >
+                          Complete Sales Management
+                        </h3>
+
+                        <!-- Description -->
+                        <p
+                          class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed"
+                        >
+                          Track daily sales, manage customer orders, and monitor
+                          payment status in real-time. Handle bulk orders and
+                          maintain detailed transaction history.
+                        </p>
+
+                        <!-- CTA Link -->
+                        <a
+                          href="#"
+                          class="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold transition-colors duration-200 group"
+                        >
+                          <span>Let's find out</span>
+                          <i
+                            data-lucide="arrow-right"
+                            class="w-4 h-4 ml-2 transition-transform duration-200 group-hover:translate-x-1"
+                          ></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+
+                <!-- Smart Inventory Control Start -->
                 <div
-                  class="row child-cols-12 g-6 md:g-8 xl:g-6"
-                  data-uc-scrollspy="target: &gt;*; delay: 500; cls: uc-animation-slide-bottom-medium"
+                  class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm mb-16"
                 >
-                  <!-- Complete Sales Management Start -->
-                  <div class="mb-6">
-                    <div class="feature-item panel">
-                      <div
-                        class="row child-cols items-center justify-between g-2 md:g-4"
-                      >
-                        <div class="col-12 md:col-6 lg:col-7">
-                          <!-- Image  -->
-                          <div
-                            class="panel overflow-hidden rounded-1-5 lg:rounded-2"
-                          >
-                            <figure
-                              class="m-0 rounded rounded-2 overflow-hidden"
-                            >
-                              <img
-                                alt="Ensuring timely delivery and maximum efficiency"
-                                loading="lazy"
-                                decoding="async"
-                                data-nimg="1"
-                                class="w-full"
-                                style="color: transparent"
-                                src="assets/images/Features/sales-management.png"
-                              />
-                            </figure>
-                          </div>
+                  <div
+                    class="grid grid-cols-1 md:grid-cols-2 items-center gap-4"
+                  >
+                    <!-- Content -->
+                    <div class="text-center">
+                      <div class="space-y-6">
+                        <!-- Icon -->
+                        <div
+                          class="inline-flex items-center justify-center w-12 h-12 bg-primary-600 text-white rounded-xl"
+                        >
+                          <i
+                            data-lucide="badge-dollar-sign"
+                            class="w-6 h-6"
+                          ></i>
                         </div>
-                        <div class="col-12 md:col-6 lg:col-5">
-                          <div class="panel">
-                            <div
-                              class="panel vstack justify-center gap-4 h-100 sm:p-3 lg:p-4"
-                            >
-                              <div>
-                                <div class="panel vstack gap-2">
-                                  <span
-                                    class="cstack w-48px h-48px bg-primary text-secondary rounded-1-5 mb-2 d-none lg:d-inline-flex"
-                                    ><i class="icon-1 unicon-cloud-download"></i
-                                  ></span>
-                                  <h3 class="h4 sm:h3 xl:h2 m-0">
-                                    Complete Sales Management
-                                  </h3>
-                                  <p
-                                    class="fs-6 lg:fs-5 opacity-70 dark:opacity-80"
-                                  >
-                                    Track daily sales, manage customer orders,
-                                    and monitor payment status in real-time.
-                                    Handle bulk orders and maintain detailed
-                                    transaction history.
-                                  </p>
-                                  <a
-                                    href="#"
-                                    class="uc-link dark:text-secondary fw-bold hstack gap-narrow sm:mt-1 lg:mt-2"
-                                    ><span>Let&#x27;s find out</span
-                                    ><i
-                                      class="position-relative icon icon-1 unicon-arrow-right rtl:rotate-180 translate-y-px"
-                                    ></i
-                                  ></a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
 
-                  <!-- Smart Inventory Control Start -->
-                  <div>
-                    <div class="feature-item panel">
-                      <div
-                        class="row child-cols items-center justify-between g-2 md:g-4"
-                      >
-                        <div class="col-12 md:col-6 lg:col-7 md:order-2">
-                          <div
-                            class="panel overflow-hidden rounded-1-5 lg:rounded-2"
-                          >
-                            <figure
-                              class="m-0 rounded rounded-2 overflow-hidden"
-                            >
-                              <img
-                                alt="Ensuring timely delivery and maximum efficiency"
-                                loading="lazy"
-                                class="w-full"
-                                decoding="async"
-                                data-nimg="1"
-                                src="assets/images/Features/smart-inventory.png"
-                              />
-                            </figure>
-                          </div>
-                        </div>
-                        <div class="col-12 md:col-6 lg:col-5 md:order-1">
-                          <div class="panel">
-                            <div
-                              class="panel vstack justify-center gap-4 h-100 sm:p-3 lg:p-4"
-                            >
-                              <div>
-                                <div class="panel vstack gap-2">
-                                  <span
-                                    class="cstack w-48px h-48px bg-primary text-secondary rounded-1-5 mb-2 d-none lg:d-inline-flex"
-                                    ><i class="icon-1 unicon-course"></i
-                                  ></span>
-                                  <h3 class="h4 sm:h3 xl:h2 m-0">
-                                    Smart Inventory Control
-                                  </h3>
-                                  <p
-                                    class="fs-6 lg:fs-5 opacity-70 dark:opacity-80"
-                                  >
-                                    Monitor rice stock levels, raw material
-                                    inventory, and automated low-stock alerts.
-                                    Manage supplier relationships and track
-                                    purchase orders efficiently.
-                                  </p>
-                                  <a
-                                    href="#"
-                                    class="uc-link dark:text-secondary fw-bold hstack gap-narrow sm:mt-1 lg:mt-2"
-                                    ><span>Let&#x27;s find out</span
-                                    ><i
-                                      class="position-relative icon icon-1 unicon-arrow-right rtl:rotate-180 translate-y-px"
-                                    ></i
-                                  ></a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                        <!-- Title -->
+                        <h3
+                          class="text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 dark:text-white"
+                        >
+                          Smart Inventory Control
+                        </h3>
 
-                  <!-- Crushing & Production Tracking Start -->
-                  <div>
-                    <div class="feature-item panel">
-                      <div
-                        class="row child-cols items-center justify-between g-2 md:g-4"
-                      >
-                        <div class="col-12 md:col-6 lg:col-7">
-                          <div
-                            class="panel overflow-hidden rounded-1-5 lg:rounded-2"
-                          >
-                            <figure
-                              class="m-0 rounded rounded-2 overflow-hidden"
-                            >
-                              <img
-                                alt="Ensuring timely delivery and maximum efficiency"
-                                loading="lazy"
-                                decoding="async"
-                                data-nimg="1"
-                                class="w-full"
-                                style="color: transparent"
-                                src="assets/images/Features/crushing-production.png"
-                              />
-                            </figure>
-                          </div>
-                        </div>
-                        <div class="col-12 md:col-6 lg:col-5">
-                          <div class="panel">
-                            <div
-                              class="panel vstack justify-center gap-4 h-100 sm:p-3 lg:p-4"
-                            >
-                              <div>
-                                <div class="panel vstack gap-2">
-                                  <span
-                                    class="cstack w-48px h-48px bg-primary text-secondary rounded-1-5 mb-2 d-none lg:d-inline-flex"
-                                    ><i
-                                      class="icon-1 unicon-volume-block-storage"
-                                    ></i
-                                  ></span>
-                                  <h3 class="h4 sm:h3 xl:h2 m-0">
-                                    Crushing & Production Tracking
-                                  </h3>
-                                  <p
-                                    class="fs-6 lg:fs-5 opacity-70 dark:opacity-80"
-                                  >
-                                    Manage crushing schedules, track production
-                                    efficiency, and monitor equipment status.
-                                    Get real-time reports on daily output and
-                                    quality metrics.
-                                  </p>
-                                  <a
-                                    href="#"
-                                    class="uc-link dark:text-secondary fw-bold hstack gap-narrow sm:mt-1 lg:mt-2"
-                                    ><span>Let&#x27;s find out</span
-                                    ><i
-                                      class="position-relative icon icon-1 unicon-arrow-right rtl:rotate-180 translate-y-px"
-                                    ></i
-                                  ></a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                        <!-- Description -->
+                        <p
+                          class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed"
+                        >
+                          Monitor rice stock levels, raw material inventory, and
+                          automated low-stock alerts. Manage supplier
+                          relationships and track purchase orders efficiently.
+                        </p>
 
-                  <!-- Reports Start -->
-                  <div>
-                    <div class="feature-item panel">
-                      <div
-                        class="row child-cols items-center justify-between g-2 md:g-4"
-                      >
-                        <div class="col-12 md:col-6 lg:col-7 md:order-2">
-                          <div
-                            class="panel overflow-hidden rounded-1-5 lg:rounded-2"
-                          >
-                            <figure
-                              class="m-0 rounded rounded-2 overflow-hidden"
-                            >
-                              <img
-                                alt="Ensuring timely delivery and maximum efficiency"
-                                loading="lazy"
-                                decoding="async"
-                                data-nimg="1"
-                                class="w-full"
-                                style="color: transparent"
-                                src="assets/images/Features/reports.png"
-                              />
-                            </figure>
-                          </div>
-                        </div>
-                        <div class="col-12 md:col-6 lg:col-5 md:order-1">
-                          <div class="panel">
-                            <div
-                              class="panel vstack justify-center gap-4 h-100 sm:p-3 lg:p-4"
-                            >
-                              <div>
-                                <div class="panel vstack gap-2">
-                                  <span
-                                    class="cstack w-48px h-48px bg-primary text-secondary rounded-1-5 mb-2 d-none lg:d-inline-flex"
-                                    ><i class="icon-1 unicon-model"></i
-                                  ></span>
-                                  <h3 class="h4 sm:h3 xl:h2 m-0">Reports</h3>
-                                  <p
-                                    class="fs-6 lg:fs-5 opacity-70 dark:opacity-80"
-                                  >
-                                    Handle supplier payables, track expenses,
-                                    and generate comprehensive financial
-                                    reports. Monitor cash flow and profitability
-                                    with detailed analytics.
-                                  </p>
-                                  <a
-                                    href="#"
-                                    class="uc-link dark:text-secondary fw-bold hstack gap-narrow sm:mt-1 lg:mt-2"
-                                    ><span>Let&#x27;s find out</span
-                                    ><i
-                                      class="position-relative icon icon-1 unicon-arrow-right rtl:rotate-180 translate-y-px"
-                                    ></i
-                                  ></a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                        <!-- CTA Link -->
+                        <a
+                          href="#"
+                          class="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold transition-colors duration-200 group"
+                        >
+                          <span>Let's find out</span>
+                          <i
+                            data-lucide="arrow-right"
+                            class="w-4 h-4 ml-2 transition-transform duration-200 group-hover:translate-x-1"
+                          ></i>
+                        </a>
+                      </div>
+                    </div>
+
+                    <!-- Image -->
+                    <div class="">
+                      <div class="rounded-xl">
+                        <img
+                          alt="Complete Sales Management Dashboard"
+                          loading="lazy"
+                          decoding="async"
+                          class="w-full h-auto object-cover"
+                          src="assets/images/Features/smart-inventory.png"
+                        />
                       </div>
                     </div>
                   </div>
-                  <!-- Reports End -->
+                </div>
+
+                <!-- Crushing & Production Tracking Start -->
+                <div
+                  class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm mb-16"
+                >
+                  <div
+                    class="grid grid-cols-1 md:grid-cols-2 items-center gap-4"
+                  >
+                    <!-- Image -->
+                    <div class="">
+                      <div class="rounded-xl">
+                        <img
+                          alt="Complete Sales Management Dashboard"
+                          loading="lazy"
+                          decoding="async"
+                          class="w-full h-auto object-cover"
+                          src="assets/images/Features/crushing-production.png"
+                        />
+                      </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="text-center">
+                      <div class="space-y-6">
+                        <!-- Icon -->
+                        <div
+                          class="inline-flex items-center justify-center w-12 h-12 bg-primary-600 text-white rounded-xl"
+                        >
+                          <i
+                            data-lucide="badge-dollar-sign"
+                            class="w-6 h-6"
+                          ></i>
+                        </div>
+
+                        <!-- Title -->
+                        <h3
+                          class="text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 dark:text-white"
+                        >
+                          Crushing & Production Tracking Start
+                        </h3>
+
+                        <!-- Description -->
+                        <p
+                          class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed"
+                        >
+                          Manage crushing schedules, track production
+                          efficiency, and monitor equipment status. Get
+                          real-time reports on daily output and quality metrics.
+                        </p>
+
+                        <!-- CTA Link -->
+                        <a
+                          href="#"
+                          class="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold transition-colors duration-200 group"
+                        >
+                          <span>Let's find out</span>
+                          <i
+                            data-lucide="arrow-right"
+                            class="w-4 h-4 ml-2 transition-transform duration-200 group-hover:translate-x-1"
+                          ></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Reports Start -->
+                <div
+                  class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm mb-16"
+                >
+                  <div
+                    class="grid grid-cols-1 md:grid-cols-2 items-center gap-4"
+                  >
+                    <!-- Content -->
+                    <div class="text-center">
+                      <div class="space-y-6">
+                        <!-- Icon -->
+                        <div
+                          class="inline-flex items-center justify-center w-12 h-12 bg-primary-600 text-white rounded-xl"
+                        >
+                          <i
+                            data-lucide="badge-dollar-sign"
+                            class="w-6 h-6"
+                          ></i>
+                        </div>
+
+                        <!-- Title -->
+                        <h3
+                          class="text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 dark:text-white"
+                        >
+                          Reports
+                        </h3>
+
+                        <!-- Description -->
+                        <p
+                          class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed"
+                        >
+                          Handle supplier payables, track expenses, and generate
+                          comprehensive financial reports. Monitor cash flow and
+                          profitability with detailed analytics.
+                        </p>
+
+                        <!-- CTA Link -->
+                        <a
+                          href="#"
+                          class="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold transition-colors duration-200 group"
+                        >
+                          <span>Let's find out</span>
+                          <i
+                            data-lucide="arrow-right"
+                            class="w-4 h-4 ml-2 transition-transform duration-200 group-hover:translate-x-1"
+                          ></i>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- Image -->
+                    <div class="">
+                      <div class="rounded-xl">
+                        <img
+                          alt="Complete Sales Management Dashboard"
+                          loading="lazy"
+                          decoding="async"
+                          class="w-full h-auto object-cover"
+                          src="assets/images/Features/reports.png"
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -611,311 +650,302 @@
         </div>
 
         <!-- Start your 30-day free trial. -->
-        <div id="pre_cta" class="pre-cta section panel overflow-hidden">
-          <div class="section-outer panel pb-4 sm:pb-6 xl:pb-9">
-            <div class="container max-w-xl">
-              <div
-                class="section-inner panel p-4 md:p-6 lg:p-8 rounded-1-5 lg:rounded-2 bg-secondary dark:bg-gray-800 dark:text-white"
-                data-anime="onview: -200; translateY: [24, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500;"
-              >
-                <div
-                  class="vstack items-center gap-2 sm:max-w-600px lg:max-w-650px mx-auto text-center opacity-0 translate-y-8 transition-all duration-700 scroll-animate"
-                  data-anime="onview: -200; targets: &gt;*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});"
-                >
-                  <h2 class="h3 lg:h2 m-0">
-                    Ready to Modernize Your Rice Mill Operations?
-                  </h2>
-                  <p
-                    class="fs-6 md:fs-5 xl:fs-4 text-dark dark:text-white text-opacity-70"
-                  >
-                    Start your 30-day free trial today. No setup fees, no
-                    long-term contracts. See the difference in your first week.
-                  </p>
-                  <div
-                    class="vstack sm:hstack justify-center gap-1 lg:gap-2 mt-1 lg:mt-2 flex-sm-column"
-                  >
-                    <a
-                      class="btn btn-md rounded-default bg-white dark:bg-gray-700 dark:text-white border-gray-900 dark:border-white border-opacity-20 hover:border-opacity-40 shadow-xs"
-                      data-uc-toggle=""
-                      ><i class="icon-1 unicon-play-outline fw-medium"></i
-                      ><span>View demo</span></a
-                    ><a
-                      class="btn btn-md btn-primary rounded-default text-white shadow-xs"
-                      href="page-pricing.html"
-                      >Start free trial</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div
+          class="text-center opacity-0 translate-y-8 transition-all duration-700 scroll-animate bg-[#F5EEE9] mx-2 xl:mx-32 rounded-2xl p-6 md:p-8 lg:p-12 my-10 lg:my-16"
+        >
+          <h2 class="text-2xl lg:text-4xl font-bold opacity-0 translate-y-8 transition-all duration-700 banner-animate">
+            Ready to Modernize Your Rice Mill Operations?
+          </h2>
+          <p class="text-opacity-70 my-3 opacity-0 translate-y-8 transition-all duration-700 banner-animate">
+            Start your 30-day free trial today. No setup fees, no long-term
+            contracts. See the difference in your first week.
+          </p>
+          <div
+            class="flex justify-center items-center gap-1 lg:gap-2 mt-1 lg:mt-2 opacity-0 translate-y-8 transition-all duration-700 banner-animate"
+          >
+            <a
+              class="inline-flex items-center justify-center px-4 py-3 text-base font-medium bg-white dark:bg-gray-700 dark:text-white border border-gray-900 dark:border-white border-opacity-20 hover:border-opacity-40 rounded-lg shadow-sm transition-all duration-200 no-underline"
+              data-uc-toggle=""
+              ><i data-lucide="play-circle" class="w-6 h-6 mr-1"></i
+              ><span>View demo</span></a
+            ><a
+              class="inline-flex items-center justify-center px-4 py-3 text-base font-medium text-white bg-primary-500 hover:bg-primary-600 rounded-lg shadow-sm transition-colors duration-200 no-underline"
+              href="page-pricing.html"
+              >Start free trial</a
+            >
           </div>
         </div>
 
         <!-- Pricing Plans -->
         <div
           id="pricing_tiers"
-          class="pricing-tiers section panel overflow-hidden"
+          class="py-16 md:py-20 bg-primary-600 text-white"
+          
         >
-          <div
-            class="section-outer panel py-4 md:py-6 xl:py-9 rounded-1-5 lg:rounded-2 bg-primary-600 dark:bg-primary text-white"
-          >
-            <div class="container sm:max-w-lg xl:max-w-xl">
-              <div class="section-inner panel">
-                <div class="panel vstack gap-4 sm:gap-6 xl:gap-8">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Header -->
+            <div class="text-center mb-16 opacity-0 translate-y-8 transition-all duration-700 banner-animate">
+              <p
+                class="text-gray-200 text-sm font-medium uppercase tracking-wide mb-4"
+              >
+                Pricing Plans
+              </p>
+              <h2
+                class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6"
+              >
+                Simple, transparent pricing for every rice mill
+              </h2>
+              <p class="text-xl text-gray-200 max-w-3xl mx-auto">
+                Choose the plan that fits your mill size. No hidden fees.
+              </p>
+            </div>
+
+            <!-- Pricing Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 opacity-0 translate-y-8 transition-all duration-700 banner-animate">
+              <!-- Small Mill Plan -->
+              <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                <!-- Header -->
+                <div class="p-8 text-center">
                   <div
-                    class="heading vstack gap-2 panel max-w-550px mx-auto text-center opacity-0 translate-y-8 transition-all duration-700 scroll-animate"
-                    data-anime="onview: -100; targets: &gt;*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});"
+                    class="inline-flex items-center justify-center w-16 h-16 bg-primary-100 text-primary-600 rounded-full mb-4"
                   >
-                    <span class="fw-bold text-secondary">Pricing Plans</span>
-                    <h2 class="title h3 lg:h2 xl:h1 text-white m-0">
-                      Simple, transparent pricing for every rice mill
-                    </h2>
-                    <p class="fs-6 xl:fs-5 text-white text-opacity-70">
-                      Choose the plan that fits your mill size. No hidden fees.
-                    </p>
+                    <i data-lucide="layers" class="w-8 h-8"></i>
                   </div>
-                  <div
-                    class="content panel opacity-0 translate-y-8 transition-all duration-700 scroll-animate"
-                  >
-                    <div
-                      class="row child-cols-12 sm:child-cols-6 xl:child-cols-4 col-match justify-center g-2 lg:g-4"
-                      data-anime="onview: -100; targets: &gt;*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 400});"
-                    >
-                      <div>
-                        <div
-                          class="tier panel vstack justify-between rounded-1-5 lg:rounded-2 bg-secondary text-dark text-center"
-                        >
-                          <header
-                            class="tier-header vstack gap-2 items-center p-3 md:p-4 pb-0 md:pb-0 pt-4 md:pt-6"
-                          >
-                            <span
-                              class="icon-box cstack w-48px h-48px rounded-circle bg-white text-primary shadow-xs"
-                              ><i class="icon-1 unicon-sub-volume fw-bold"></i
-                            ></span>
-                            <h5 class="h5 lg:h4 m-0 text-primary">
-                              Small Mill
-                            </h5>
-                            <div class="d-flex gap-narrow items-end mt-1">
-                              <h3 class="h1 lg:display-6 price m-0 text-dark">
-                                ৳2,999
-                              </h3>
-                              <span class="h6 lg:h3 m-0 pb-narrow text-dark"
-                                >/ mo</span
-                              >
-                            </div>
-                            <p class="desc">Perfect for small operations.</p>
-                          </header>
-                          <div class="tier-body p-3 md:p-4">
-                            <ul class="nav-y gap-2 text-start">
-                              <li class="hstack items-start gap-1">
-                                <i
-                                  class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"
-                                ></i
-                                ><span class="d-inline">Up to 5 users</span>
-                              </li>
-                              <li class="hstack items-start gap-1">
-                                <i
-                                  class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"
-                                ></i
-                                ><span class="d-inline"
-                                  >Sales & Purchase Management</span
-                                >
-                              </li>
-                              <li class="hstack items-start gap-1">
-                                <i
-                                  class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"
-                                ></i
-                                ><span class="d-inline"
-                                  >Basic Inventory Tracking</span
-                                >
-                              </li>
-                              <li class="hstack items-start gap-1">
-                                <i
-                                  class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"
-                                ></i
-                                ><span class="d-inline">Monthly Reports</span>
-                              </li>
-                              <li class="hstack items-start gap-1">
-                                <i
-                                  class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"
-                                ></i
-                                ><span class="d-inline">Email Support</span>
-                              </li>
-                            </ul>
-                          </div>
-                          <footer class="tier-footer p-3 md:p-4 border-top">
-                            <a
-                              class="btn btn-md btn-primary text-white rounded-default w-100"
-                              href="sign-up.html"
-                              ><span>Get started</span></a
-                            >
-                          </footer>
-                        </div>
-                      </div>
-                      <div>
-                        <div
-                          class="tier panel vstack justify-between rounded-1-5 lg:rounded-2 bg-secondary text-dark text-center position-relative"
-                        >
-                          <span
-                            class="fs-7 position-absolute top-0 end-0 fw-bold text-uppercase text-primary my-2 mx-3"
-                            >Popular</span
-                          >
-                          <header
-                            class="tier-header vstack gap-2 items-center p-3 md:p-4 pb-0 md:pb-0 pt-4 md:pt-6"
-                          >
-                            <span
-                              class="icon-box cstack w-48px h-48px rounded-circle bg-white text-primary shadow-xs"
-                              ><i class="icon-1 unicon-course fw-bold"></i
-                            ></span>
-                            <h5 class="h5 lg:h4 m-0 text-primary">
-                              Medium Mill
-                            </h5>
-                            <div class="d-flex gap-narrow items-end mt-1">
-                              <h3 class="h1 lg:display-6 price m-0 text-dark">
-                                ৳4,999
-                              </h3>
-                              <span class="h6 lg:h3 m-0 pb-narrow text-dark"
-                                >/ mo</span
-                              >
-                            </div>
-                            <p class="desc">Most popular choice.</p>
-                          </header>
-                          <div class="tier-body p-3 md:p-4">
-                            <ul class="nav-y gap-2 text-start">
-                              <li class="hstack items-start gap-1">
-                                <i
-                                  class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"
-                                ></i
-                                ><span class="d-inline"
-                                  >All <b>Small Mill</b> features</span
-                                >
-                              </li>
-                              <li class="hstack items-start gap-1">
-                                <i
-                                  class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"
-                                ></i
-                                ><span class="d-inline">Up to 15 users</span>
-                              </li>
-                              <li class="hstack items-start gap-1">
-                                <i
-                                  class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"
-                                ></i
-                                ><span class="d-inline"
-                                  >Advanced Crushing Management</span
-                                >
-                              </li>
-                              <li class="hstack items-start gap-1">
-                                <i
-                                  class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"
-                                ></i
-                                ><span class="d-inline"
-                                  >Financial Reports & Analytics</span
-                                >
-                              </li>
-                              <li class="hstack items-start gap-1">
-                                <i
-                                  class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"
-                                ></i
-                                ><span class="d-inline"
-                                  >Phone & Email Support</span
-                                >
-                              </li>
-                            </ul>
-                          </div>
-                          <footer class="tier-footer p-3 md:p-4 border-top">
-                            <a
-                              class="btn btn-md btn-primary text-white rounded-default w-100"
-                              href="sign-up.html"
-                              ><span>Start a free trial</span></a
-                            >
-                          </footer>
-                        </div>
-                      </div>
-                      <div>
-                        <div
-                          class="tier panel vstack justify-between rounded-1-5 lg:rounded-2 bg-secondary text-dark text-center"
-                        >
-                          <header
-                            class="tier-header vstack gap-2 items-center p-3 md:p-4 pb-0 md:pb-0 pt-4 md:pt-6"
-                          >
-                            <span
-                              class="icon-box cstack w-48px h-48px rounded-circle bg-white text-primary shadow-xs"
-                              ><i class="icon-1 unicon-building fw-bold"></i
-                            ></span>
-                            <h5 class="h5 lg:h4 m-0 text-primary">
-                              Large Mill
-                            </h5>
-                            <div class="d-flex gap-narrow items-end mt-1">
-                              <h3 class="h1 lg:display-6 price m-0 text-dark">
-                                ৳9,999
-                              </h3>
-                              <span class="h6 lg:h3 m-0 pb-narrow text-dark"
-                                >/ mo</span
-                              >
-                            </div>
-                            <p class="desc">For large operations.</p>
-                          </header>
-                          <div class="tier-body p-3 md:p-4">
-                            <ul class="nav-y gap-2 text-start">
-                              <li class="hstack items-start gap-1">
-                                <i
-                                  class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"
-                                ></i
-                                ><span class="d-inline"
-                                  >All <b>Medium Mill</b> features</span
-                                >
-                              </li>
-                              <li class="hstack items-start gap-1">
-                                <i
-                                  class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"
-                                ></i
-                                ><span class="d-inline">Unlimited users</span>
-                              </li>
-                              <li class="hstack items-start gap-1">
-                                <i
-                                  class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"
-                                ></i
-                                ><span class="d-inline"
-                                  >Multi-location management</span
-                                >
-                              </li>
-                              <li class="hstack items-start gap-1">
-                                <i
-                                  class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"
-                                ></i
-                                ><span class="d-inline"
-                                  >Custom integrations & API access</span
-                                >
-                              </li>
-                              <li class="hstack items-start gap-1">
-                                <i
-                                  class="cstack w-24px h-24px bg-primary-100 text-primary rounded-circle unicon-checkmark fw-bold"
-                                ></i
-                                ><span class="d-inline"
-                                  >24/7 Priority Support</span
-                                >
-                              </li>
-                            </ul>
-                          </div>
-                          <footer class="tier-footer p-3 md:p-4 border-top">
-                            <a
-                              class="btn btn-md btn-primary text-white rounded-default w-100"
-                              href="sign-up.html"
-                              ><span>Book a demo</span></a
-                            >
-                          </footer>
-                        </div>
-                      </div>
-                    </div>
+                  <h3 class="text-2xl font-bold text-gray-900 mb-2">
+                    Small Mill
+                  </h3>
+                  <div class="flex items-end justify-center mb-4">
+                    <span class="text-4xl font-bold text-gray-900">৳2,999</span>
+                    <span class="text-gray-500 ml-2">/ mo</span>
                   </div>
-                  <p
-                    class="text-center text-white text-opacity-70"
-                    data-anime="onview: -100; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: 200;"
+                  <p class="text-gray-600">Perfect for small operations.</p>
+                </div>
+
+                <!-- Features -->
+                <div class="px-8 pb-8">
+                  <ul class="space-y-4">
+                    <li class="flex items-start">
+                      <i
+                        data-lucide="check"
+                        class="w-5 h-5 text-primary-600 mt-0.5 mr-3 flex-shrink-0"
+                      ></i>
+                      <span class="text-gray-700">Up to 5 users</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i
+                        data-lucide="check"
+                        class="w-5 h-5 text-primary-600 mt-0.5 mr-3 flex-shrink-0"
+                      ></i>
+                      <span class="text-gray-700"
+                        >Sales & Purchase Management</span
+                      >
+                    </li>
+                    <li class="flex items-start">
+                      <i
+                        data-lucide="check"
+                        class="w-5 h-5 text-primary-600 mt-0.5 mr-3 flex-shrink-0"
+                      ></i>
+                      <span class="text-gray-700"
+                        >Basic Inventory Tracking</span
+                      >
+                    </li>
+                    <li class="flex items-start">
+                      <i
+                        data-lucide="check"
+                        class="w-5 h-5 text-primary-600 mt-0.5 mr-3 flex-shrink-0"
+                      ></i>
+                      <span class="text-gray-700">Monthly Reports</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i
+                        data-lucide="check"
+                        class="w-5 h-5 text-primary-600 mt-0.5 mr-3 flex-shrink-0"
+                      ></i>
+                      <span class="text-gray-700">Email Support</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- CTA -->
+                <div class="px-8 pb-8">
+                  <a
+                    href="sign-up.html"
+                    class="block w-full text-center px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg transition-colors duration-200"
                   >
-                    Prices exclude any applicable taxes.
-                  </p>
+                    Get started
+                  </a>
                 </div>
               </div>
+
+              <!-- Medium Mill Plan (Popular) -->
+              <div
+                class="bg-white rounded-2xl shadow-xl overflow-hidden relative border-2 border-primary-500"
+              >
+                <!-- Popular Badge -->
+                <div
+                  class="absolute top-0 right-0 bg-primary-500 text-white px-4 py-2 text-sm font-medium"
+                >
+                  Popular
+                </div>
+
+                <!-- Header -->
+                <div class="p-8 text-center">
+                  <div
+                    class="inline-flex items-center justify-center w-16 h-16 bg-primary-100 text-primary-600 rounded-full mb-4"
+                  >
+                    <i data-lucide="book" class="w-8 h-8"></i>
+                  </div>
+                  <h3 class="text-2xl font-bold text-gray-900 mb-2">
+                    Medium Mill
+                  </h3>
+                  <div class="flex items-end justify-center mb-4">
+                    <span class="text-4xl font-bold text-gray-900">৳4,999</span>
+                    <span class="text-gray-500 ml-2">/ mo</span>
+                  </div>
+                  <p class="text-gray-600">Most popular choice.</p>
+                </div>
+
+                <!-- Features -->
+                <div class="px-8 pb-8">
+                  <ul class="space-y-4">
+                    <li class="flex items-start">
+                      <i
+                        data-lucide="check"
+                        class="w-5 h-5 text-primary-600 mt-0.5 mr-3 flex-shrink-0"
+                      ></i>
+                      <span class="text-gray-700"
+                        >All <strong>Small Mill</strong> features</span
+                      >
+                    </li>
+                    <li class="flex items-start">
+                      <i
+                        data-lucide="check"
+                        class="w-5 h-5 text-primary-600 mt-0.5 mr-3 flex-shrink-0"
+                      ></i>
+                      <span class="text-gray-700">Up to 15 users</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i
+                        data-lucide="check"
+                        class="w-5 h-5 text-primary-600 mt-0.5 mr-3 flex-shrink-0"
+                      ></i>
+                      <span class="text-gray-700"
+                        >Advanced Crushing Management</span
+                      >
+                    </li>
+                    <li class="flex items-start">
+                      <i
+                        data-lucide="check"
+                        class="w-5 h-5 text-primary-600 mt-0.5 mr-3 flex-shrink-0"
+                      ></i>
+                      <span class="text-gray-700"
+                        >Financial Reports & Analytics</span
+                      >
+                    </li>
+                    <li class="flex items-start">
+                      <i
+                        data-lucide="check"
+                        class="w-5 h-5 text-primary-600 mt-0.5 mr-3 flex-shrink-0"
+                      ></i>
+                      <span class="text-gray-700">Phone & Email Support</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- CTA -->
+                <div class="px-8 pb-8">
+                  <a
+                    href="sign-up.html"
+                    class="block w-full text-center px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg transition-colors duration-200"
+                  >
+                    Free trial
+                  </a>
+                </div>
+              </div>
+
+              <!-- Large Mill Plan -->
+              <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                <!-- Header -->
+                <div class="p-8 text-center">
+                  <div
+                    class="inline-flex items-center justify-center w-16 h-16 bg-primary-100 text-primary-600 rounded-full mb-4"
+                  >
+                    <i data-lucide="clipboard-list" class="w-8 h-8"></i>
+                  </div>
+                  <h3 class="text-2xl font-bold text-gray-900 mb-2">
+                    Large Mill
+                  </h3>
+                  <div class="flex items-end justify-center mb-4">
+                    <span class="text-4xl font-bold text-gray-900">৳9,999</span>
+                    <span class="text-gray-500 ml-2">/ mo</span>
+                  </div>
+                  <p class="text-gray-600">For large operations.</p>
+                </div>
+
+                <!-- Features -->
+                <div class="px-8 pb-8">
+                  <ul class="space-y-4">
+                    <li class="flex items-start">
+                      <i
+                        data-lucide="check"
+                        class="w-5 h-5 text-primary-600 mt-0.5 mr-3 flex-shrink-0"
+                      ></i>
+                      <span class="text-gray-700"
+                        >All <strong>Medium Mill</strong> features</span
+                      >
+                    </li>
+                    <li class="flex items-start">
+                      <i
+                        data-lucide="check"
+                        class="w-5 h-5 text-primary-600 mt-0.5 mr-3 flex-shrink-0"
+                      ></i>
+                      <span class="text-gray-700">Unlimited users</span>
+                    </li>
+                    <li class="flex items-start">
+                      <i
+                        data-lucide="check"
+                        class="w-5 h-5 text-primary-600 mt-0.5 mr-3 flex-shrink-0"
+                      ></i>
+                      <span class="text-gray-700"
+                        >Multi-location management</span
+                      >
+                    </li>
+                    <li class="flex items-start">
+                      <i
+                        data-lucide="check"
+                        class="w-5 h-5 text-primary-600 mt-0.5 mr-3 flex-shrink-0"
+                      ></i>
+                      <span class="text-gray-700"
+                        >Custom integrations & API access</span
+                      >
+                    </li>
+                    <li class="flex items-start">
+                      <i
+                        data-lucide="check"
+                        class="w-5 h-5 text-primary-600 mt-0.5 mr-3 flex-shrink-0"
+                      ></i>
+                      <span class="text-gray-700">24/7 Priority Support</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- CTA -->
+                <div class="px-8 pb-8">
+                  <a
+                    href="sign-up.html"
+                    class="block w-full text-center px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg transition-colors duration-200"
+                  >
+                    Book a demo
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Footer Text -->
+            <div class="text-center">
+              <p class="text-gray-200 text-sm">
+                Prices exclude any applicable taxes.
+              </p>
             </div>
           </div>
         </div>
@@ -923,347 +953,302 @@
         <!-- Interlock -->
         <div
           id="clients_feedbacks"
-          class="clients-feedbacks section panel overflow-hidden opacity-0 translate-y-8 transition-all duration-700 scroll-animate"
+          class="py-16 md:py-20 bg-white dark:bg-gray-900 translate-y-8 transition-all duration-700 scroll-animate"
         >
-          <div class="section-outer panel pt-4 md:pt-6 xl:pt-9">
-            <div class="container max-w-lg">
-              <div class="section-inner panel">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Testimonial Card -->
+            <div
+              class="bg-[#F5EEE9] dark:bg-gray-800 rounded-2xl overflow-hidden shadow-sm"
+            >
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
+                <!-- Content Section -->
                 <div
-                  class="panel vstack justify-center items-center gap-4 sm:gap-6 xl:gap-8"
-                  data-anime="onview: -100; targets: &gt;*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});"
+                  class="lg:col-span-8 p-8 md:p-12 flex flex-col justify-between"
                 >
-                  <div
-                    class="row child-cols-12 justify-center col-match g-2 lg:g-3"
-                    data-uc-grid=""
-                  >
-                    <div>
-                      <div
-                        class="panel vstack justify-between gap-3 rounded-2 bg-secondary dark:bg-gray-800 overflow-hidden"
+                  <!-- Logo -->
+                  <div class="mb-8 opacity-0 translate-y-8 transition-all duration-700 banner-animate">
+                    <img
+                      alt="Interlock"
+                      loading="lazy"
+                      width="163"
+                      height="48"
+                      decoding="async"
+                      class="h-12 w-auto dark:hidden"
+                      style="color: transparent"
+                      src="assets/images/brands/brand-08.svg"
+                    />
+                    <img
+                      alt="Interlock"
+                      loading="lazy"
+                      width="163"
+                      height="48"
+                      decoding="async"
+                      class="h-12 w-auto hidden dark:block"
+                      style="color: transparent"
+                      src="assets/images/brands/brand-08-dark.svg"
+                    />
+                  </div>
+
+                  <!-- Quote -->
+                  <blockquote class="mb-8">
+                    <p
+                      class="text-xl md:text-2xl lg:text-3xl font-medium text-gray-900 dark:text-white leading-relaxed opacity-0 translate-y-8 transition-all duration-700 banner-animate"
+                    >
+                      "Auto Rice Mill has completely transformed how we manage
+                      our business. From tracking daily crushing operations to
+                      managing supplier payments, everything is now organized
+                      and efficient. Our productivity has increased by 35%."
+                    </p>
+                  </blockquote>
+
+                  <!-- Author -->
+                  <div class="mt-auto opacity-0 translate-y-8 transition-all duration-700 banner-animate">
+                    <div class="flex flex-col">
+                      <cite
+                        class="text-lg font-semibold text-gray-900 dark:text-white not-italic"
                       >
-                        <div
-                          class="row child-cols-12 col-match g-0"
-                          data-uc-grid=""
-                        >
-                          <div class="sm:col-6 lg:col-8">
-                            <div
-                              class="panel vstack justify-between gap-3 px-3 py-4 lg:px-5 lg:py-6"
-                            >
-                              <div class="panel vstack items-start gap-2">
-                                <div class="panel">
-                                  <!-- Interlock image -->
-                                  <div class="hstack h-48px">
-                                    <!-- Interlock -->
-                                    <img
-                                      alt="Brand"
-                                      loading="lazy"
-                                      width="163"
-                                      height="48"
-                                      decoding="async"
-                                      data-nimg="1"
-                                      class="w-128px dark:d-none"
-                                      style="color: transparent"
-                                      src="assets/images/brands/brand-08.svg"
-                                    />
-                                    <!-- Interlock dark mode -->
-                                    <img
-                                      alt="Brand"
-                                      loading="lazy"
-                                      width="163"
-                                      height="48"
-                                      decoding="async"
-                                      data-nimg="1"
-                                      class="w-128px d-none dark:d-inline-flex"
-                                      style="color: transparent"
-                                      src="assets/images/brands/brand-08-dark.svg"
-                                    />
-                                  </div>
-                                </div>
-                                <p
-                                  class="fs-5 lg:fs-4 xl:fs-3 fw-medium text-dark dark:text-white"
-                                >
-                                  “Auto Rice Mill has completely transformed how
-                                  we manage our business. From tracking daily
-                                  crushing operations to managing supplier
-                                  payments, everything is now organized and
-                                  efficient. Our productivity has increased by
-                                  35%.”
-                                </p>
-                              </div>
-                              <!-- Footer -->
-                              <div class="panel mt-2 lg:mt-4">
-                                <div
-                                  class="panel vstack items-start gap-0 lg:gap-1"
-                                >
-                                  <h6 class="h6 lg:h5 m-0">Mohammad Rahman</h6>
-                                  <span class="fs-7 lg:h6 opacity-70"
-                                    >Rahman Rice Mills</span
-                                  >
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="sm:col-6 lg:col-4">
-                            <div
-                              class="panel overflow-hidden h-100"
-                              data-uc-lightbox="video-autoplay: true;"
-                            >
-                              <figure
-                                class="featured-image m-0 rounded ratio ratio-1x1 h-100 uc-transition-toggle overflow-hidden"
-                              >
-                                <img
-                                  alt="image"
-                                  loading="lazy"
-                                  width="1500"
-                                  height="1000"
-                                  decoding="async"
-                                  data-nimg="1"
-                                  class="media-cover image uc-transition-scale-up uc-transition-opaque"
-                                  style="color: transparent"
-                                  src="assets/images/common/login.webp"
-                                />
-                              </figure>
-                              <a
-                                class="position-absolute top-50 start-50 translate-middle cstack w-48px lg:w-64px h-48px lg:h-64px rounded-circle shadow-xs text-none bg-white bg-opacity-80 text-primary"
-                                style="backdrop-filter: blur(2px)"
-                                ><i class="icon-1 unicon-play fw-bold"></i
-                              ></a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                        Mohammad Rahman
+                      </cite>
+                      <span class="text-gray-600 dark:text-gray-400 mt-1">
+                        Rahman Rice Mills
+                      </span>
                     </div>
                   </div>
-                  <a
-                    href="#"
-                    class="uc-link dark:text-secondary fw-bold d-inline-flex items-center gap-narrow"
-                    ><span>See all feedbacks</span
-                    ><i
-                      class="icon icon-1 unicon-arrow-right rtl:rotate-180"
-                    ></i
-                  ></a>
+                </div>
+
+                <!-- Video Section -->
+                <div
+                  class="lg:col-span-4 relative h-64 lg:h-full min-h-[400px] opacity-0 translate-y-8 transition-all duration-700 banner-animate"
+                >
+                  <img
+                    alt="Customer testimonial video"
+                    loading="lazy"
+                    width="1500"
+                    height="1000"
+                    decoding="async"
+                    class="absolute inset-0 w-full h-full object-cover"
+                    style="color: transparent"
+                    src="assets/images/common/login.webp"
+                  />
+                  <!-- Play Button -->
+                  <button
+                    class="absolute inset-0 flex items-center justify-center group"
+                  >
+                    <div
+                      class="w-16 h-16 lg:w-20 lg:h-20 bg-white bg-opacity-90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg group-hover:bg-opacity-100 transition-all duration-200"
+                    >
+                      <i
+                        data-lucide="play"
+                        class="w-8 h-8 lg:w-10 lg:h-10 text-primary-600 ml-1"
+                      ></i>
+                    </div>
+                  </button>
                 </div>
               </div>
+            </div>
+
+            <!-- See All Feedbacks Link -->
+            <div class="text-center mt-12">
+              <a
+                href="#"
+                class="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-semibold transition-colors duration-200"
+              >
+                <span>See all feedbacks</span>
+                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+              </a>
             </div>
           </div>
         </div>
       </div>
 
       <!-- Meet our team -->
-      <div id="about-team" class="about-team section panel overflow-hidden">
-        <div
-          class="section-outer panel py-4 md:py-6 xl:py-9 opacity-0 translate-y-8 transition-all duration-700 scroll-animate"
-        >
-          <div class="container max-w-lg">
-            <div class="section-inner panel">
-              <div
-                class="panel vstack justify-center items-center gap-4 sm:gap-6 xl:gap-8"
-                data-anime="onview: -100; targets: &gt;*; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});"
-              >
-                <div
-                  class="heading vstack gap-2 panel max-w-700px mx-auto text-center"
-                  data-anime="onview: -100; targets: &gt;*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});"
+      <div class="bg-white text-gray-900">
+        <!-- Meet Our Team Section -->
+        <section id="team" class="py-16 md:py-20 lg:py-24 bg-white">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Header -->
+            <div class="text-center mb-16">
+              <!-- We're hiring badge -->
+              <div class="inline-flex items-center gap-2 mb-6">
+                <span
+                  class="px-3 py-1 text-sm font-medium text-primary-600 bg-primary-50 rounded-full opacity-0 translate-y-8 transition-all duration-700 banner-animate"
                 >
-                  <span class="fw-bold text-primary dark:text-secondary"
-                    >We&#x27;re hiring</span
-                  >
-                  <h2 class="title h3 lg:h2 xl:h1 m-0">Meet our team</h2>
-                  <p
-                    class="fs-6 xl:fs-5 text-dark dark:text-white text-opacity-70"
-                  >
-                    Our philosophy is simple — hire a team of diverse,
-                    passionate people and foster a culture that empowers you to
-                    do your best work.
-                  </p>
+                  We're hiring
+                </span>
+              </div>
+
+              <!-- Main heading -->
+              <h2
+                class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 opacity-0 translate-y-8 transition-all duration-700 banner-animate"
+              >
+                Meet our team
+              </h2>
+
+              <!-- Description -->
+              <p
+                class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed opacity-0 translate-y-8 transition-all duration-700 banner-animate"
+              >
+                Our philosophy is simple — hire a team of diverse, passionate
+                people and foster a culture that empowers you to do your best
+                work.
+              </p>
+            </div>
+
+            <!-- Team Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-16">
+              <!-- Row 1 -->
+              <!-- Mark Zellers -->
+              <div class="flex flex-col items-center text-center">
+                <div
+                  class="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 mb-4 overflow-hidden rounded-full bg-gray-100"
+                >
+                  <img
+                    src="assets/images/template/team-01.jpg"
+                    alt="Mark Zellers"
+                    class="w-full h-full object-cover"
+                  />
                 </div>
-                <div class="content panel">
-                  <div
-                    class="row child-cols-6 sm:child-cols-4 lg:child-cols-3 col-match gx-2 gy-6"
-                    data-anime="onview: -100; targets: &gt;*; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});"
-                  >
-                    <div>
-                      <div class="panel vstack items-center gap-2 text-center">
-                        <img
-                          alt="Mark Zellers"
-                          loading="lazy"
-                          width="400"
-                          height="400"
-                          decoding="async"
-                          data-nimg="1"
-                          class="w-72px lg:w-96px h-72px lg:h-96px rounded-circle border border-secondary-600"
-                          style="color: transparent"
-                          src="assets/images/template/team-01.jpg"
-                        />
-                        <div class="panel vstack items-center gap-0">
-                          <h6 class="h6 lg:h5 m-0">Mark Zellers</h6>
-                          <span class="fs-7 lg:fs-6 opacity-70"
-                            >Founder &amp; CEO</span
-                          >
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <div class="panel vstack items-center gap-2 text-center">
-                        <img
-                          alt="John Zellers"
-                          loading="lazy"
-                          width="400"
-                          height="400"
-                          decoding="async"
-                          data-nimg="1"
-                          class="w-72px lg:w-96px h-72px lg:h-96px rounded-circle border border-secondary-600"
-                          style="color: transparent"
-                          src="assets/images/template/team-02.jpg"
-                        />
-                        <div class="panel vstack items-center gap-0">
-                          <h6 class="h6 lg:h5 m-0">John Zellers</h6>
-                          <span class="fs-7 lg:fs-6 opacity-70"
-                            >Co-Founder</span
-                          >
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <div class="panel vstack items-center gap-2 text-center">
-                        <img
-                          alt="Kim Yun Son"
-                          loading="lazy"
-                          width="400"
-                          height="400"
-                          decoding="async"
-                          data-nimg="1"
-                          class="w-72px lg:w-96px h-72px lg:h-96px rounded-circle border border-secondary-600"
-                          style="color: transparent"
-                          src="assets/images/template/team-03.jpg"
-                        />
-                        <div class="panel vstack items-center gap-0">
-                          <h6 class="h6 lg:h5 m-0">Kim Yun Son</h6>
-                          <span class="fs-7 lg:fs-6 opacity-70"
-                            >Engineering Manager</span
-                          >
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <div class="panel vstack items-center gap-2 text-center">
-                        <img
-                          alt="André Garcia"
-                          loading="lazy"
-                          width="400"
-                          height="400"
-                          decoding="async"
-                          data-nimg="1"
-                          class="w-72px lg:w-96px h-72px lg:h-96px rounded-circle border border-secondary-600"
-                          style="color: transparent"
-                          src="assets/images/template/team-04.jpg"
-                        />
-                        <div class="panel vstack items-center gap-0">
-                          <h6 class="h6 lg:h5 m-0">André Garcia</h6>
-                          <span class="fs-7 lg:fs-6 opacity-70"
-                            >Product Manager</span
-                          >
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <div class="panel vstack items-center gap-2 text-center">
-                        <img
-                          alt="Peter Lary"
-                          loading="lazy"
-                          width="400"
-                          height="400"
-                          decoding="async"
-                          data-nimg="1"
-                          class="w-72px lg:w-96px h-72px lg:h-96px rounded-circle border border-secondary-600"
-                          style="color: transparent"
-                          src="assets/images/template/team-05.jpg"
-                        />
-                        <div class="panel vstack items-center gap-0">
-                          <h6 class="h6 lg:h5 m-0">Peter Lary</h6>
-                          <span class="fs-7 lg:fs-6 opacity-70"
-                            >UX Researcher</span
-                          >
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <div class="panel vstack items-center gap-2 text-center">
-                        <img
-                          alt="Henry Matt"
-                          loading="lazy"
-                          width="400"
-                          height="400"
-                          decoding="async"
-                          data-nimg="1"
-                          class="w-72px lg:w-96px h-72px lg:h-96px rounded-circle border border-secondary-600"
-                          style="color: transparent"
-                          src="assets/images/template/team-06.jpg"
-                        />
-                        <div class="panel vstack items-center gap-0">
-                          <h6 class="h6 lg:h5 m-0">Henry Matt</h6>
-                          <span class="fs-7 lg:fs-6 opacity-70"
-                            >Customer Success</span
-                          >
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <div class="panel vstack items-center gap-2 text-center">
-                        <img
-                          alt="Natalia"
-                          loading="lazy"
-                          width="400"
-                          height="400"
-                          decoding="async"
-                          data-nimg="1"
-                          class="w-72px lg:w-96px h-72px lg:h-96px rounded-circle border border-secondary-600"
-                          style="color: transparent"
-                          src="assets/images/template/team-07.jpg"
-                        />
-                        <div class="panel vstack items-center gap-0">
-                          <h6 class="h6 lg:h5 m-0">Natalia</h6>
-                          <span class="fs-7 lg:fs-6 opacity-70"
-                            >Lead of fun</span
-                          >
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <div class="panel vstack items-center gap-2 text-center">
-                        <img
-                          alt="Larry"
-                          loading="lazy"
-                          width="400"
-                          height="400"
-                          decoding="async"
-                          data-nimg="1"
-                          class="w-72px lg:w-96px h-72px lg:h-96px rounded-circle border border-secondary-600"
-                          style="color: transparent"
-                          src="assets/images/template/team-08.jpg"
-                        />
-                        <div class="panel vstack items-center gap-0">
-                          <h6 class="h6 lg:h5 m-0">Larry</h6>
-                          <span class="fs-7 lg:fs-6 opacity-70"
-                            >Director of Joy</span
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-1">
+                  Mark Zellers
+                </h3>
+                <p class="text-sm text-gray-600">Founder & CEO</p>
+              </div>
+
+              <!-- John Zellers -->
+              <div class="flex flex-col items-center text-center">
+                <div
+                  class="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 mb-4 overflow-hidden rounded-full bg-gray-100"
+                >
+                  <img
+                    src="assets/images/template/team-02.jpg"
+                    alt="John Zellers"
+                    class="w-full h-full object-cover"
+                  />
                 </div>
-                <a
-                  class="uc-link dark:text-secondary fw-bold d-inline-flex items-center gap-narrow mx-auto"
-                  href="page-career.html"
-                  ><span>We’re hiring</span
-                  ><i class="icon icon-1 unicon-arrow-right rtl:rotate-180"></i
-                ></a>
+                <h3 class="text-lg font-semibold text-gray-900 mb-1">
+                  John Zellers
+                </h3>
+                <p class="text-sm text-gray-600">Co-Founder</p>
+              </div>
+
+              <!-- Kim Yun Son -->
+              <div class="flex flex-col items-center text-center">
+                <div
+                  class="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 mb-4 overflow-hidden rounded-full bg-gray-100"
+                >
+                  <img
+                    src="assets/images/template/team-03.jpg"
+                    alt="Kim Yun Son"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-1">
+                  Kim Yun Son
+                </h3>
+                <p class="text-sm text-gray-600">Engineering Manager</p>
+              </div>
+
+              <!-- André Garcia -->
+              <div class="flex flex-col items-center text-center">
+                <div
+                  class="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 mb-4 overflow-hidden rounded-full bg-gray-100"
+                >
+                  <img
+                    src="assets/images/template/team-04.jpg"
+                    alt="André Garcia"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-1">
+                  André Garcia
+                </h3>
+                <p class="text-sm text-gray-600">Product Manager</p>
+              </div>
+
+              <!-- Row 2 -->
+              <!-- Peter Lary -->
+              <div class="flex flex-col items-center text-center">
+                <div
+                  class="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 mb-4 overflow-hidden rounded-full bg-gray-100"
+                >
+                  <img
+                    src="assets/images/template/team-05.jpg"
+                    alt="Peter Lary"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-1">
+                  Peter Lary
+                </h3>
+                <p class="text-sm text-gray-600">UX Researcher</p>
+              </div>
+
+              <!-- Henry Matt -->
+              <div class="flex flex-col items-center text-center">
+                <div
+                  class="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 mb-4 overflow-hidden rounded-full bg-gray-100"
+                >
+                  <img
+                    src="assets/images/template/team-06.jpg"
+                    alt="Henry Matt"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-1">
+                  Henry Matt
+                </h3>
+                <p class="text-sm text-gray-600">Customer Success</p>
+              </div>
+
+              <!-- Natalia -->
+              <div class="flex flex-col items-center text-center">
+                <div
+                  class="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 mb-4 overflow-hidden rounded-full bg-gray-100"
+                >
+                  <img
+                    src="assets/images/template/team-07.jpg"
+                    alt="Natalia"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-1">
+                  Natalia
+                </h3>
+                <p class="text-sm text-gray-600">Lead of fun</p>
+              </div>
+
+              <!-- Larry -->
+              <div class="flex flex-col items-center text-center">
+                <div
+                  class="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 mb-4 overflow-hidden rounded-full bg-gray-100"
+                >
+                  <img
+                    src="assets/images/template/team-08.jpg"
+                    alt="Larry"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 class="text-lg font-semibold text-gray-900 mb-1">Larry</h3>
+                <p class="text-sm text-gray-600">Director of Joy</p>
               </div>
             </div>
+
+            <!-- We're hiring link -->
+            <div class="text-center">
+              <a
+                href="#careers"
+                class="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 font-semibold text-lg transition-colors opacity-0 translate-y-8 transition-all duration-700 banner-animate"
+              >
+                <span>We're hiring</span>
+                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+              </a>
+            </div>
           </div>
-        </div>
+        </section>
       </div>
 
       <!-- FAQ -->
-      <div class="mt-20 container max-w-lg">
+      <div class="mt-5 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
         <div class="text-center mb-5">
           <div class="inline-flex items-center justify-center mb-4">
             <h2
@@ -1823,278 +1808,150 @@
           </div>
         </div>
       </div>
-
-      <!-- Contracts -->
-      <div id="cta" class="cta section panel overflow-hidden">
-        <div
-          class="section-outer panel pt-2 sm:pt-6 xl:pt-6 opacity-0 translate-y-8 transition-all duration-700 scroll-animate"
-        >
-          <div class="container max-w-xl">
-            <div class="section-inner">
-              <div
-                class="vstack items-center gap-narrow max-w-400px lg:max-w-700px mx-auto text-center"
-                data-anime="onview:-100; targets: &gt;*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});"
-              >
-                <h2 class="h4 lg:h3 m-0">
-                  Ready to Transform Your Rice Mill Business?
-                </h2>
-                <p
-                  class="fs-6 sm:fs-5 text-dark dark:text-white text-opacity-70 mt-1 lg:mt-2"
-                >
-                  Join hundreds of rice mill owners who have modernized their
-                  operations with Auto Rice Mill.
-                </p>
-                <div
-                  class="vstack sm:hstack justify-center gap-1 lg:gap-2 mt-2 lg:mt-4 fdr"
-                >
-                  <a
-                    class="btn btn-md rounded-default bg-white dark:bg-gray-700 dark:text-white border-gray-900 dark:border-white border-opacity-20 hover:border-opacity-40 shadow-xs"
-                    data-uc-toggle=""
-                    ><i class="icon-1 unicon-play-outline fw-medium"></i
-                    ><span>View demo</span></a
-                  ><a
-                    class="btn btn-md btn-primary rounded-default text-white shadow-xs"
-                    href="page-pricing.html"
-                    >Start free trial</a
-                  >
-                </div>
-                <p class="fs-7 text-dark dark:text-white text-opacity-70 mt-2">
-                  30-day trial, no credit card required. Complete setup
-                  assistance included.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
 
     <!-- Footer -->
-    <footer
-      id="uc-footer"
-      class="uc-footer panel py-4 lg:py-6 xl:py-9 overflow-hidden"
-    >
-      <div class="container max-w-xl">
-        <div
-          class="footer-inner vstack gap-4 lg:gap-6 xl:gap-8 opacity-0 translate-y-8 transition-all duration-700 scroll-animate"
-          data-anime="onview: -100; targets: &gt;*; translateY: [48, 0]; opacity: [0, 1]; easing: easeOutCubic; duration: 500; delay: anime.stagger(100, {start: 200});"
-        >
-          <!-- Logo, play store and app store buttons -->
+    <div class="text-gray-900">
+      <!-- Footer Section -->
+      <footer class="pt-16 pb-8 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <!-- Top grid -->
           <div
-            class="uc-footer-top panel p-4 lg:p-6 rounded-1-5 lg:rounded-2 bg-secondary dark:bg-gray-800"
+            class="grid grid-cols-2 md:grid-cols-5 gap-8 text-center md:text-left mb-10"
           >
-            <div
-              class="vstack lg:hstack gap-4 justify-between section-heading-2"
-            >
-              <!-- Lexend logo -->
-              <div>
-                <div class="uc-logo">
-                  <a
-                    class="panel text-none"
-                    style="width: 140px"
-                    href="home-4.html"
-                    ><img
-                      alt=""
-                      loading="lazy"
-                      width="117"
-                      height="40"
-                      decoding="async"
-                      data-nimg="1"
-                      class="dark:d-none"
-                      style="color: transparent"
-                      src="assets/images/common/logo-light.svg" /><img
-                      alt=""
-                      loading="lazy"
-                      width="117"
-                      height="40"
-                      decoding="async"
-                      data-nimg="1"
-                      class="d-none dark:d-block"
-                      style="color: transparent"
-                      src="assets/images/common/logo-dark.svg"
-                  /></a>
-                </div>
-              </div>
-              <!-- Plays Store and App Store buttons -->
-              <div>
-                <div class="hstack items-start gap-1">
-                  <a href="#"
-                    ><img
-                      alt="Google Play Store"
-                      data-uc-svg=""
-                      loading="lazy"
-                      width="135"
-                      height="40"
-                      decoding="async"
-                      data-nimg="1"
-                      class="text-gray-900 dark:text-white hover:text-opacity-70 transition-all duration-150 image-filter"
-                      style="color: transparent"
-                      src="assets/images/common/playstore.svg" /></a
-                  ><a href="#"
-                    ><img
-                      alt="Apple Store"
-                      data-uc-svg=""
-                      loading="lazy"
-                      width="134"
-                      height="40"
-                      decoding="async"
-                      data-nimg="1"
-                      class="text-gray-900 dark:text-white hover:text-opacity-70 transition-all duration-150 image-filter"
-                      style="color: transparent"
-                      src="assets/images/common/appstore.svg"
-                  /></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="uc-footer-nav panel">
-            <div class="row child-cols-6 sm:child-cols col-match g-4">
-              <div class="">
-                <ul class="nav-y gap-1 fw-medium">
-                  <li class="uc-nav-header opacity-60 lg:mb-2">Inner pages</li>
-                  <li><a href="page-features.html">Features</a></li>
-                  <li><a href="page-pricing.html">Pricing</a></li>
-                  <li><a href="page-about.html">About</a></li>
-                  <li><a href="page-career.html">Career</a></li>
-                  <li><a href="page-contact.html">Contact</a></li>
-                  <li><a href="page-contact-2.html">Contact v2</a></li>
-                </ul>
-              </div>
-              <div class="">
-                <ul class="nav-y gap-1 fw-medium">
-                  <li class="uc-nav-header opacity-60 lg:mb-2">Blog</li>
-                  <li><a href="blog.html">Classic</a></li>
-                  <li><a href="blog-2cols.html">Grid 2 cols</a></li>
-                  <li><a href="blog-3cols.html">Grid 3 cols</a></li>
-                  <li><a href="blog-4cols.html">Grid 4 cols</a></li>
-                  <li><a href="blog-details/1.html">Blog detail</a></li>
-                  <li><a href="blog-details-2/2.html">Blog detail v2</a></li>
-                </ul>
-              </div>
-              <div class="">
-                <ul class="nav-y gap-1 fw-medium">
-                  <li class="uc-nav-header opacity-60 lg:mb-2">Shop</li>
-                  <li><a href="shop.html">Shop</a></li>
-                  <li><a href="shop.html">With sidebar</a></li>
-                  <li>
-                    <a href="shop-product-detail/1.html">Product detail</a>
-                  </li>
-                  <li><a href="shop-cart.html">Cart</a></li>
-                  <li><a href="shop-checkout.html">Checkout</a></li>
-                  <li><a href="shop-order.html">Order confirmation</a></li>
-                </ul>
-              </div>
-              <div class="d-none lg:d-block">
-                <ul class="nav-y gap-1 fw-medium">
-                  <li class="uc-nav-header opacity-60 lg:mb-2">Other</li>
-                  <li><a href="page-terms.html">FAQ</a></li>
-                  <li><a href="page-not-found.html">404</a></li>
-                  <li><a href="coming-soon.html">Coming Soon</a></li>
-                  <li><a href="page-terms.html">Terms of service</a></li>
-                  <li><a href="page-privacy.html">Privacy policy</a></li>
-                  <li><a href="sign-in.html">Request a demo</a></li>
-                </ul>
-              </div>
-              <div class="">
-                <ul class="nav-y gap-1 fw-medium">
-                  <li class="uc-nav-header opacity-60 lg:mb-2">Membership</li>
-                  <li><a href="sign-in.html">Sign in</a></li>
-                  <li><a href="sign-in-2.html">Sign in v2</a></li>
-                  <li><a href="sign-up.html">Sign up</a></li>
-                  <li><a href="sign-up-2.html">Sign up v2</a></li>
-                  <li><a href="reset-password.html">Reset password</a></li>
-                  <li>
-                    <a href="reset-password-2.html">Reset password v2</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div
-            class="uc-footer-bottom panel vstack gap-4 pt-4 lg:pt-6 border-top dark:text-white"
-          >
-            <div
-              class="vstack sm:hstack justify-center items-center gap-1 lg:gap-2"
-            >
-              <p class="opacity-60">
-                Lexend ©
-                <!-- -->2025<!-- -->, All rights reserved.
-              </p>
-              <ul class="nav-x gap-2 fw-medium">
-                <li><a href="#">Privacy notice</a></li>
-                <li><a href="#">Legal</a></li>
-                <li><a href="#">Cookie settings</a></li>
+            <!-- Inner Pages -->
+            <div>
+              <h4 class="text-xs font-bold uppercase mb-4 tracking-wider">
+                Inner Pages
+              </h4>
+              <ul class="space-y-1">
+                <li><a href="#" class="hover:underline">Features</a></li>
+                <li><a href="#" class="hover:underline">Pricing</a></li>
+                <li><a href="#" class="hover:underline">About</a></li>
+                <li><a href="#" class="hover:underline">Career</a></li>
+                <li><a href="#" class="hover:underline">Contact</a></li>
+                <li><a href="#" class="hover:underline">Contact v2</a></li>
               </ul>
             </div>
-            <div class="hstack justify-center gap-2 lg:gap-3">
-              <ul class="nav-x gap-2">
+            <!-- Blog -->
+            <div>
+              <h4 class="text-xs font-bold uppercase mb-4 tracking-wider">
+                Blog
+              </h4>
+              <ul class="space-y-1">
+                <li><a href="#" class="hover:underline">Classic</a></li>
+                <li><a href="#" class="hover:underline">Grid 2 cols</a></li>
+                <li><a href="#" class="hover:underline">Grid 3 cols</a></li>
+                <li><a href="#" class="hover:underline">Grid 4 cols</a></li>
+                <li><a href="#" class="hover:underline">Blog detail</a></li>
+                <li><a href="#" class="hover:underline">Blog detail v2</a></li>
+              </ul>
+            </div>
+            <!-- Shop -->
+            <div>
+              <h4 class="text-xs font-bold uppercase mb-4 tracking-wider">
+                Shop
+              </h4>
+              <ul class="space-y-1">
+                <li><a href="#" class="hover:underline">Shop</a></li>
+                <li><a href="#" class="hover:underline">With sidebar</a></li>
+                <li><a href="#" class="hover:underline">Product detail</a></li>
+                <li><a href="#" class="hover:underline">Cart</a></li>
+                <li><a href="#" class="hover:underline">Checkout</a></li>
                 <li>
-                  <a href="#"
-                    ><i class="icon icon-2 unicon-logo-linkedin"></i
-                  ></a>
-                </li>
-                <li>
-                  <a href="#"
-                    ><i class="icon icon-2 unicon-logo-facebook"></i
-                  ></a>
-                </li>
-                <li>
-                  <a href="#"
-                    ><i class="icon icon-2 unicon-logo-x-filled"></i
-                  ></a>
-                </li>
-                <li>
-                  <a href="#"
-                    ><i class="icon icon-2 unicon-logo-instagram"></i
-                  ></a>
-                </li>
-                <li>
-                  <a href="#"
-                    ><i class="icon icon-2 unicon-logo-youtube"></i
-                  ></a>
+                  <a href="#" class="hover:underline">Order confirmation</a>
                 </li>
               </ul>
-              <div class="vr"></div>
-              <div class="d-inline-block" style="position: relative">
-                <a
-                  class="hstack gap-1 text-none fw-medium"
-                  role="button"
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  ><i class="icon icon-1 unicon-earth-filled"></i
-                  ><span>English</span
-                  ><span
-                    data-uc-drop-parent-icon=""
-                    class="uc-icon uc-drop-parent-icon"
-                    ><svg width="12" height="12" viewBox="0 0 12 12">
-                      <polyline
-                        fill="none"
-                        stroke="#000"
-                        stroke-width="1.1"
-                        points="1 3.5 6 8.5 11 3.5"
-                      ></polyline></svg></span
-                ></a>
-                <div
-                  class="p-2 bg-white dark:bg-gray-800 shadow-xs rounded w-150px uc-drop"
-                  style="bottom: 40px; right: 0; max-width: 1428px"
-                >
-                  <ul class="nav-y gap-1 fw-medium items-end">
-                    <li><a>English</a></li>
-                    <li><a>العربية</a></li>
-                    <li><a>中文</a></li>
-                  </ul>
-                </div>
-              </div>
+            </div>
+            <!-- Other -->
+            <div>
+              <h4 class="text-xs font-bold uppercase mb-4 tracking-wider">
+                Other
+              </h4>
+              <ul class="space-y-1">
+                <li><a href="#" class="hover:underline">FAQ</a></li>
+                <li><a href="#" class="hover:underline">404</a></li>
+                <li><a href="#" class="hover:underline">Coming Soon</a></li>
+                <li>
+                  <a href="#" class="hover:underline">Terms of service</a>
+                </li>
+                <li><a href="#" class="hover:underline">Privacy policy</a></li>
+                <li><a href="#" class="hover:underline">Request a demo</a></li>
+              </ul>
+            </div>
+            <!-- Membership -->
+            <div>
+              <h4 class="text-xs font-bold uppercase mb-4 tracking-wider">
+                Membership
+              </h4>
+              <ul class="space-y-1">
+                <li><a href="#" class="hover:underline">Sign in</a></li>
+                <li><a href="#" class="hover:underline">Sign in v2</a></li>
+                <li><a href="#" class="hover:underline">Sign up</a></li>
+                <li><a href="#" class="hover:underline">Sign up v2</a></li>
+                <li><a href="#" class="hover:underline">Reset password</a></li>
+                <li>
+                  <a href="#" class="hover:underline">Reset password v2</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Divider -->
+          <hr class="my-8 border-gray-200" />
+          <!-- Bottom -->
+          <div
+            class="flex flex-col md:flex-row md:items-center md:justify-between gap-6 md:gap-0"
+          >
+            <div
+              class="text-center md:text-left text-sm text-gray-500 mb-2 md:mb-0"
+            >
+              Lexend © 2025, All rights reserved.
+            </div>
+            <div
+              class="flex flex-col md:flex-row md:items-center gap-2 md:gap-6 text-center md:text-left"
+            >
+              <a href="#" class="font-medium text-gray-900 hover:underline"
+                >Privacy notice</a
+              >
+              <a href="#" class="font-medium text-gray-900 hover:underline"
+                >Legal</a
+              >
+              <a href="#" class="font-medium text-gray-900 hover:underline"
+                >Cookie settings</a
+              >
+            </div>
+          </div>
+          <!-- Socials & Language -->
+          <div
+            class="flex flex-col md:flex-row md:items-center md:justify-between mt-8 gap-4 md:gap-0"
+          >
+            <div class="flex justify-center md:justify-start gap-4">
+              <a href="#" aria-label="LinkedIn"
+                ><i data-lucide="linkedin" class="w-5 h-5"></i
+              ></a>
+              <a href="#" aria-label="Facebook"
+                ><i data-lucide="facebook" class="w-5 h-5"></i
+              ></a>
+              <a href="#" aria-label="X"
+                ><i data-lucide="twitter" class="w-5 h-5"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i data-lucide="instagram" class="w-5 h-5"></i
+              ></a>
+              <a href="#" aria-label="YouTube"
+                ><i data-lucide="youtube" class="w-5 h-5"></i
+              ></a>
+            </div>
+            <div
+              class="flex items-center justify-center md:justify-end gap-2 text-gray-900"
+            >
+              <i data-lucide="globe" class="w-5 h-5"></i>
+              <span>English</span>
             </div>
           </div>
         </div>
-      </div>
-    </footer>
-
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script>
-      lucide.createIcons();
-    </script>
+      </footer>
+    </div>
 
     <!-- Scroll to Top Button -->
     <button
@@ -2117,6 +1974,11 @@
         />
       </svg>
     </button>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
     <!-- Script for Scroll to Top Button -->
     <script src="js/animation.js"></script>
     <script src="js/faq.js"></script>

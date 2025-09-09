@@ -55,3 +55,84 @@ window.addEventListener("DOMContentLoaded", function () {
     observer.observe(element);
   });
 });
+
+// For mobile menu animation
+(function () {
+  const body = document.body;
+  const toggleBtn = document.getElementById("navToggle");
+  const closeBtn = document.getElementById("navClose");
+  const drawer = document.getElementById("mobileDrawer");
+  const overlay = document.getElementById("drawerOverlay");
+
+  let lastFocused = null;
+
+  function openDrawer() {
+    lastFocused = document.activeElement;
+    drawer.setAttribute("aria-hidden", "false");
+    toggleBtn.setAttribute("aria-expanded", "true");
+
+    // slide in & fade overlay
+    drawer.classList.remove("translate-x-full");
+    overlay.classList.remove("pointer-events-none");
+    requestAnimationFrame(() => {
+      overlay.classList.add("opacity-100");
+      overlay.classList.remove("opacity-0");
+    });
+
+    // prevent body scroll
+    body.style.overflow = "hidden";
+
+    // focus first focusable inside drawer
+    const focusable = drawer.querySelector(
+      'a, button, [tabindex]:not([tabindex="-1"])'
+    );
+    if (focusable) focusable.focus();
+
+    // swap overlay classes helper
+    overlay.classList.add("pointer-events-auto");
+  }
+
+  function closeDrawer() {
+    drawer.setAttribute("aria-hidden", "true");
+    toggleBtn.setAttribute("aria-expanded", "false");
+
+    // slide out & fade overlay
+    drawer.classList.add("translate-x-full");
+    overlay.classList.remove("opacity-100");
+    overlay.classList.add("opacity-0");
+
+    // allow body scroll after transition
+    setTimeout(() => {
+      overlay.classList.add("pointer-events-none");
+      overlay.classList.remove("pointer-events-auto");
+      body.style.overflow = "";
+      if (lastFocused) lastFocused.focus();
+    }, 300); // match transition duration
+  }
+
+  // Toggle handlers
+  if (toggleBtn) toggleBtn.addEventListener("click", openDrawer);
+  if (closeBtn) closeBtn.addEventListener("click", closeDrawer);
+  if (overlay) overlay.addEventListener("click", closeDrawer);
+
+  // Close on ESC
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && drawer.getAttribute("aria-hidden") === "false") {
+      closeDrawer();
+    }
+  });
+
+  // Trap focus inside drawer when open (basic trap)
+  document.addEventListener("focusin", (e) => {
+    if (
+      drawer.getAttribute("aria-hidden") === "false" &&
+      !drawer.contains(e.target)
+    ) {
+      // bounce focus back into drawer
+      const focusables = drawer.querySelectorAll(
+        'a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      );
+      if (focusables.length) focusables[0].focus();
+    }
+  });
+})();
