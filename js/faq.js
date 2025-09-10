@@ -18,6 +18,7 @@
     btn.setAttribute("aria-expanded", "true");
     btn.classList.add(
       "bg-gradient-to-r",
+      "dark:from-gray-800/80",
       "from-blue-50/80",
       "to-indigo-50/80",
       "shadow-inner",

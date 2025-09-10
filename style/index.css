@@ -11,3 +11,8 @@
 }
 /* Custom animation utility for repeated use */
 
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
